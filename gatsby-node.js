@@ -12,7 +12,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /src/components/MainFooter,
+            test: /MainFooter/,
             use: [loaders.null()],
           },
         ],
