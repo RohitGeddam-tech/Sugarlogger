@@ -22,37 +22,14 @@ const GenresNav = ({ NavLinks, isMobile }) => {
               </Link>
             </li>
           ))}
-          {/* <li>
-          <div className={dropdown}>
-            <Dropdown className="navdrop" text="More Categories" onClick={()=>{setClicked(!clicked)}}>
-              <Dropdown.Menu>
-                {NavLinks.map(doc => (
-                  <Link to={doc.links}>
-                    <Dropdown.Item
-                      className="genres-droplink"
-                      text={doc.name}
-                    />
-                  </Link>
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </li> */}
-          <li onClick={()=>{setClicked(!clicked)}}>
+          <li
+            onClick={() => {
+              setClicked(!clicked)
+            }}
+          >
             <button>More Categories</button>
             <div className={dropdown}>
               <ul>
-                {/* {NavLinks.map(document => (
-                <li>
-                  <Link
-                    to={document.links}
-                    activeClassName="linkactive"
-                    className="genres-navlinks"
-                  >
-                    {document.name}
-                  </Link>
-                </li>
-              ))} */}
                 {NavLinks.map(doc => (
                   <li>
                     <Link to={doc.links}>
@@ -90,4 +67,23 @@ export default GenresNav
             ))}
           </select>
         </div> */
+}
+
+{
+  /* <li>
+          <div className={dropdown}>
+            <Dropdown className="navdrop" text="More Categories" onClick={()=>{setClicked(!clicked)}}>
+              <Dropdown.Menu>
+                {NavLinks.map(doc => (
+                  <Link to={doc.links}>
+                    <Dropdown.Item
+                      className="genres-droplink"
+                      text={doc.name}
+                    />
+                  </Link>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        </li> */
 }
