@@ -111,6 +111,7 @@ const Home = () => {
       setLarge(window.matchMedia("(max-width:1400px)").matches)
     })
   }, [isLarge])
+  
 
   const [isMob, setMob] = useState(
     typeof window !== "undefined" ? window.matchMedia("(max-width:600px)").matches : null
