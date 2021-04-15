@@ -1,5 +1,5 @@
 import * as React from "react"
-import Home from '../Viewmode/home'
+import Home from '../Viewmode/Home'
 
 const IndexPage = () => (
   <Home />
