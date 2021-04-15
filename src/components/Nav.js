@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./css/Nav.css"
 import { Link } from "gatsby"
-import { Squash as Hamburger } from "hamburger-react"
+import { Sling as Hamburger } from 'hamburger-react'
 import Svg from "../images/SugarloggerLogo.svg"
 import NavLinks from "./components/NavLinks"
 
