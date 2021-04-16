@@ -18,7 +18,8 @@ const FirstMob = () => {
   return (
     <>
       <div className="banner">
-        <div className="banner-container">
+        <div className="bannermob-container">
+          <Link to='/article/'>
           <div className="bannermobbox">
             <div className="banner-title">
               <h1>Featured Post</h1>
@@ -62,6 +63,7 @@ const FirstMob = () => {
               </div>
             </div>
           </div>
+          </Link>
           {/* <div className="genres-bar">
               <GenresNav NavLinks={NavLinks} />
             </div> */}

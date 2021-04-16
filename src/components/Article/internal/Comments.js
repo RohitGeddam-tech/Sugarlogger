@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import G from "../../../images/searchG.png"
+import G from "../../../images/button.png"
 import GoogleLogin from "react-google-login"
 
 const Comments = () => {
@@ -36,15 +36,12 @@ const Comments = () => {
           clientId="887546326439-jplpchgjsp872d0o335iijt1q2k2t1ei.apps.googleusercontent.com"
           render={renderProps => (
             <button
-              className="commentbtn"
+              className="commentmobbtn"
               type="submit"
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
             >
               <img src={G} alt="g" />
-              <div className="comment-alignp">
-                <p>sign in with google</p>
-              </div>
             </button>
           )}
           buttonText="sign in with google"

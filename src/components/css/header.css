@@ -87,7 +87,8 @@ cursor: pointer;
 }
 
 .start{
-    width: 127px;
+    width: 137px;
+    white-space: nowrap;
 height: 35px;
 border: 1px solid #D44638;
 box-sizing: border-box;

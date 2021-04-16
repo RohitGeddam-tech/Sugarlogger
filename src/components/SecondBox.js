@@ -73,41 +73,41 @@ const Large = () => {
 }
 
 const SecondBox = () => {
-  const [isTab, setTab] = useState(
-    window.matchMedia("(max-width:900px)").matches
-  )
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setTab(window.matchMedia("(max-width:900px)").matches)
-    })
-  })
-
-  const [isPro, setPro] = useState(
-    window.matchMedia("(max-width:1080px)").matches
-  )
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setPro(window.matchMedia("(max-width:1080px)").matches)
-    })
-  })
-
   const [isLarge, setLarge] = useState(
-    window.matchMedia("(max-width:1400px)").matches
+    typeof window !== "undefined" ? window.matchMedia("(max-width:1400px)").matches : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
       setLarge(window.matchMedia("(max-width:1400px)").matches)
     })
-  })
+  }, [isLarge])
 
-  const [isMob, setMob] = useState(
-    window.matchMedia("(max-width:600px)").matches
+  const [isPro, setPro] = useState(
+    typeof window !== "undefined" ? window.matchMedia("(max-width:1080px)").matches : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setMob(window.matchMedia("(max-width:600px)").matches)
+      setPro(window.matchMedia("(max-width:1080px)").matches)
     })
-  })
+  }, [isPro])
+
+  const [isTab, setTab] = useState(
+    typeof window !== "undefined" ? window.matchMedia("(max-width:900px)").matches : null
+  )
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setTab(window.matchMedia("(max-width:900px)").matches)
+    })
+  }, [isTab])
+
+  const [isMob, setMob] = useState(
+    typeof window !== "undefined" ? window.matchMedia("(max-width:550px)").matches : null
+  )
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setMob(window.matchMedia("(max-width:550px)").matches)
+    })
+  }, [isMob])
 
   return (
     <>

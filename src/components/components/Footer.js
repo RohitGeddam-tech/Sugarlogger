@@ -29,7 +29,7 @@ const Header = () => {
         <form className="subscribe" onSubmit={handleSubmit}>
           <h1 className="subtext">Subscribe to our Newsletter</h1>
           <input
-            className="search"
+            className="searchpage"
             type="text"
             name='search'
             value={search}

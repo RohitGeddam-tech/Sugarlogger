@@ -43,11 +43,11 @@ const SecondMob = () => {
 
   return (
     <>
-      <div className="second-container">
+      <div className="secondmob-container">
         <div className="searchmobbox">
           <Search placeholder='Search' />
         </div>
-        <div className="cardBox">
+        <div className="cardMobBox">
           <div className="allCards">{Row}</div>
           <Cardbtn
             page={page}

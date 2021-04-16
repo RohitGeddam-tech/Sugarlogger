@@ -15,7 +15,7 @@ const SecondPage = () => {
   const Row = Cardbox.slice(pageVisited, pageVisited + perPage).map(doc => {
     return (
       <div className="tabcard">
-        <div className="tabboxcard" key={doc.id}>
+        <Link to="/article/" className="tabboxcard" key={doc.id}>
           <div className="cardimage">
             <img src={doc.image} alt="banner" />
           </div>
@@ -32,7 +32,7 @@ const SecondPage = () => {
             </div>
             <div className="card-footer">
               <div className="card-left">
-                <h1>{doc.by}</h1>
+                <h1>By <h2>{doc.by}</h2></h1>
                 <p>{doc.date}</p>
               </div>
               <div className="card-right">
@@ -47,7 +47,7 @@ const SecondPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     )
   })
