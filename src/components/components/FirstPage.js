@@ -21,7 +21,7 @@ const FirstPage = () => {
     <>
       <div className="banner">
         <div className="banner-container">
-          <div className="bannerbox">
+          <Link to="/article/" className="bannerbox">
             <div className="bannerimg">
               <img src={banner} alt="banner" />
             </div>
@@ -48,7 +48,10 @@ const FirstPage = () => {
               </div>
               <div className="banner-footer">
                 <div className="right">
-                  <h1>By Kiran Patil</h1>
+                  <div className='colorOrange'>
+                    <h2>By</h2>
+                    <h1>Kiran Patil</h1>
+                  </div>
                   <p>26 January 2021</p>
                 </div>
                 <div className="left">
@@ -63,7 +66,7 @@ const FirstPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="genres-bar">
             <GenresNav NavLinks={NavLinks} />
           </div>

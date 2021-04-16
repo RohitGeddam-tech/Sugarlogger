@@ -3,9 +3,8 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 8px;
   margin-bottom: 15px;
-  padding: 10px;
+  margin-top: 15px;
   background: #ffffff;
   box-sizing: border-box;
 }
@@ -68,7 +67,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -171,6 +169,17 @@
   padding-bottom: 20px;
 }
 
+.articlemob-container{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .first-text p {
   font-family: "SourceSansPro", sans-serif;
   font-style: normal;
@@ -255,7 +264,11 @@
 
 .adbox {
   width: 100%;
-  padding: 15px;
+  padding: 5px;
+}
+
+.admobbox{
+  width: 100%;
 }
 
 .ad {
@@ -273,7 +286,12 @@
   display: flex;
   padding: 10px;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.relatedmob-heading{
+  width: 100%;
+  display: flex;
 }
 
 .related-heading h1 {
@@ -329,7 +347,6 @@
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -486,6 +503,25 @@
   flex-flow: column;
   padding: 15px;
   padding-bottom: 20px !important;
+}
+
+.commentmobbox{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding-top: 15px;
+  padding-bottom: 20px !important;
+}
+
+.commentmobbox h1{
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 15px !important;
+  text-transform: capitalize;
+  color: #282c36;
 }
 
 .commentbox h1 {
@@ -860,6 +896,7 @@ button.commentbtn {
 .article-padding{
   width: 95%;
   margin: auto;
+  margin-top: 15px;
 }
 
 /*Desktop ends*/

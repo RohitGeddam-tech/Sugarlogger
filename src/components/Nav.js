@@ -3,7 +3,7 @@ import "./css/Nav.css"
 import { Link } from "gatsby"
 import { Sling as Hamburger } from 'hamburger-react'
 import Svg from "../images/SugarloggerLogo.svg"
-import NavLinks from "./components/NavLinks"
+import NavLinks from "./components/NavBarLinks"
 
 const TestMob = () => {
   const [isActive, setActive] = useState(false)
@@ -16,7 +16,7 @@ const TestMob = () => {
             <nav className="container-fullnav">
               <div className="nav-icon">
                 <Hamburger
-                  direction="left"
+                  direction="right"
                   className="ham"
                   duration={0.4}
                   color="#202020"

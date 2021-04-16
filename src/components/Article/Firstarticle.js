@@ -108,7 +108,7 @@ const Secondarray = [
 const SecondPart = () => {
   return (
     <>
-      <div className="article-container">
+      <div className="articlemob-container">
         <Secondpart_art Secondarray={Secondarray} />
         <div className="article-bottom">
           <h1> Share : </h1>
@@ -132,26 +132,29 @@ const SecondPart = () => {
 const FirstArticle = () => {
   return (
     <>
-      <div className="adbox">
+      <div className="admobbox">
         <div className="ad">
           <h1>AD</h1>
         </div>
       </div>
       <Firstarticle />
-      <div className="divviider"></div>
+      <div className="diviider"></div>
       <SecondPart />
-      <div className="divviider"></div>
-      <div className="commentbox">
+      <div className="diviider"></div>
+      <div className="commentmobbox">
         <h1>add a comment</h1>
         <Comments />
       </div>
-      <div className="divviider"></div>
-      <div className="commentbox">
+      <div className="diviider"></div>
+      <div className="commentmobbox">
         <h1>View comments</h1>
         <ViewComments />
       </div>
-      <div className="divviider"></div>
+      <div className="diviider" style={{width:'100% !important'}}></div>
       <div className='related-padding'>
+      <div className="relatedmob-heading">
+        <h1>Related Articles</h1>
+      </div>
       {Cardbox.slice(0,3).map(doc => {
         return (
           <Mobbox id={doc.id} image={doc.image} buttonname={doc.buttonname} btnname={doc.btnname} Title={doc.Title} 

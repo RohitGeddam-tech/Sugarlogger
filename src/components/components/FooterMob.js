@@ -22,11 +22,11 @@ const FooterMob = () => {
   
     return (
       <footer>
-        <div className="footer-container">
+        <div className="footermob-container">
           <form className="subscribe-tab" onSubmit={handleSubmit}>
             <h1 className="subtext-mob">Subscribe to our Newsletter</h1>
             <input
-              className="search tab"
+              className="searchpage tab"
               type="text"
               name='search'
               onChange={handleChange}

@@ -30,7 +30,10 @@ const Related = ({Relatedbox}) => {
               <div className="ui avatar image"><h1>KP</h1></div>
                 <div className="cardrel-footer">
                   <div className='right'>
-                  <h1>By {doc.by}</h1>
+                  <div className='colorOrange'>
+                    <h2>By</h2>
+                    <h1>{doc.by}</h1>
+                  </div>
                   <p>on {doc.date}</p>
                   </div>
                   <div className="left">

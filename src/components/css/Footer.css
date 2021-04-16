@@ -1,11 +1,11 @@
 footer{
     width: 100%;
-    background-color: #EEEEEE;
+    background-color: #EBEBEB;
 }
 
 .large-footer{
     width: 100% !important;
-    background-color: #EEEEEE;
+    background-color: #EBEBEB;
 }
 
 .footer-container{
@@ -37,7 +37,8 @@ footer{
     margin-bottom: 0;
 }
 
-.search{
+.searchpage{
+    width: 95%;
     height: 35px;
     background: #FFFFFF;
     border: 0.5px solid #B7B7B7;
@@ -137,6 +138,7 @@ color: #B7B7B7;
     text-align: center;
     text-transform: capitalize;
     color: #D44638;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -210,6 +212,7 @@ color: #B7B7B7;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 .boxes{
@@ -323,7 +326,7 @@ li{
     font-size: 30px;
     line-height: 37px;
     color: #D44638;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .tab{
