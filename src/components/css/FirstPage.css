@@ -321,7 +321,6 @@
   display: block;
   width: fit-content !important;
   cursor: pointer;
-  padding: 10px;
   background-color: white;
 }
 
@@ -427,7 +426,7 @@
   line-height: 23px;
   text-align: center;
   color: #282c36;
-  padding: 8px;
+  padding: 10px;
   white-space: nowrap;
   background-color: white;
 }
