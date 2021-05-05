@@ -11,7 +11,7 @@
   display: flex;
   flex-flow: column;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 .bannermob-container{
@@ -19,7 +19,7 @@
   display: flex;
   flex-flow: column;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 20px;
 }
 
 .bannerbox {
@@ -28,7 +28,7 @@
   justify-content: space-between;
   background: #ffffff;
   border: 0.5px solid #b7b7b7;
-  margin-bottom: 3%;
+  margin-bottom: 20px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
@@ -210,7 +210,8 @@
 }
 
 .genres-bar {
-  width: 100%;
+  width: 85%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   background: #ffffff;
@@ -218,7 +219,21 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  margin-bottom: 3%;
+  margin-bottom: 0;
+  height: fit-content;
+}
+
+.genres-mobbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 0.5px solid #b7b7b7;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  margin-bottom: 0;
   height: fit-content;
 }
 
@@ -264,8 +279,8 @@
   color: #282c36;
 }
 
-.overflow-links ul{
-  width: 100%;
+.overflow-links>ul{
+  width: 1300px;
   display: flex;
   align-items: center;
   justify-content: flex-start !important;
@@ -275,6 +290,31 @@
 .new-drop{
   display: block;
   position: absolute;
+  height: 250px;
+  overflow: auto;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 11;
+}
+
+.reverse-drop{
+  display: block;
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  height: 250px;
+  overflow: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 11;
+}
+
+.reverse-drop ul{
+  display: block;
+  width: fit-content !important;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
 }
 
 .new-drop ul{
@@ -282,6 +322,7 @@
   width: fit-content !important;
   cursor: pointer;
   padding: 10px;
+  background-color: white;
 }
 
 .none-drop{
@@ -290,6 +331,13 @@
 
 .overflow-links{
   display: inline-flex;
+  position: relative;
+  width: 100%;
+}
+
+.overflow-links ul{
+  /* overflow-x: auto;
+  overflow-y: hidden; */
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -380,6 +428,7 @@
   text-align: center;
   color: #282c36;
   padding: 8px;
+  white-space: nowrap;
   background-color: white;
 }
 

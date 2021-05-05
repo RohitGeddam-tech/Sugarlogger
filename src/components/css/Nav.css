@@ -1,163 +1,162 @@
-.tabnav{
-    width: 100%;
-    background: white;
-    position: sticky !important;
-    top: 0;
-    z-index: 999;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
+.tabnav {
+  width: 100%;
+  background: white;
+  position: fixed !important;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
 }
 
-.tabheader{
-    width: 100%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
+.tabheader {
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
 }
 
-.container-fullnav{
-    width: 95%;
-    display: flex;
-    align-items: center !important;
-    margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: space-between;
+.container-fullnav {
+  width: 95%;
+  display: flex;
+  align-items: center !important;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
 }
 
-
-.fade{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
+.fade {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
-.link-nav{
-    font-family: 'SourceSansPro',sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 25px;
-display: flex;
-align-items: center;
-text-align: center;
-text-transform: capitalize;
-margin: 10px;
-color: #282C36;
+.link-nav {
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px;
+  color: #282c36;
 }
 
-.link-nav:first-child{
-    margin-top: 20px;
+.link-nav:first-child {
+  margin-top: 20px;
 }
 
-.fade:not(.show){
-    opacity: 1 !important;
+.fade:not(.show) {
+  opacity: 1 !important;
 }
 
-.logintab{
-    padding: 14px 70px;
-border: 1px solid #282C36;
-box-sizing: border-box;
-border-radius: 5px;
-background-color: white;
-font-family: 'SourceSansPro',sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-text-align: center;
-text-transform: capitalize;
-color: #282C36;
-margin-bottom: 10px;
-margin-top: 10px;
+.logintab {
+  padding: 14px 70px;
+  border: 1px solid #282c36;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #282c36;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.login-tab{
-    border: 1px solid #282C36;
-box-sizing: border-box;
-border-radius: 5px;
-background-color: white;
-font-family: 'SourceSansPro',sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-text-align: center;
-text-transform: capitalize;
-color: #282C36;
-margin-bottom: 10px;
-margin-top: 10px;
-padding: 7px 14px;
+.login-tab {
+  border: 1px solid #282c36;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #282c36;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 7px 14px;
 }
 
-.login-tab:hover{
-    border: 1px solid #282C36;
-box-sizing: border-box;
-border-radius: 5px;
-background-color: #282C36;
-font-family: 'SourceSansPro',sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-text-align: center;
-text-transform: capitalize;
-color: #fff;
-margin-bottom: 10px;
-margin-top: 10px;
-padding: 7px 14px;
+.login-tab:hover {
+  border: 1px solid #282c36;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #282c36;
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 7px 14px;
 }
 
-.starttab{
-    padding: 14px 70px;
-border: 1px solid #D44638;
-box-sizing: border-box;
-border-radius: 5px;
-background-color: #D44638;
-font-family: 'SourceSansPro',sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-display: flex;
-align-items: center;
-text-transform: capitalize;
-color: #fff;
-margin-top: 10px;
-margin-bottom: 20px;
+.starttab {
+  padding: 14px 70px;
+  border: 1px solid #d44638;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #d44638;
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.starttab:hover{
-    padding: 14px 70px;
-    border: 1px solid #D44638;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #fff;
-    font-family: 'SourceSansPro',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    color: #D44638;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.starttab:hover {
+  padding: 14px 70px;
+  border: 1px solid #d44638;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "SourceSansPro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #d44638;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.link-activenav{
-    color: #D44638;
+.link-activenav {
+  color: #d44638;
 }
 
-.linkactive{
-    margin: 5px;
+.linkactive {
+  margin: 5px;
 }
 
-.big.home.icon{
-margin: 0 !important;
-height: 59px !important;
-width: 79px !important;
-display: flex;
-align-items: center !important;
-justify-content: center !important;
+.big.home.icon {
+  margin: 0 !important;
+  height: 59px !important;
+  width: 79px !important;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
 }

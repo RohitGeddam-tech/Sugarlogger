@@ -1,14 +1,67 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect, useCallback } from "react"
 import { Dropdown } from "semantic-ui-react"
 import { Link } from "gatsby"
 
-const GenresNav = ({ NavLinks, isMobile }) => {
+const GenresNav = ({ NavLinks, isMobile, space }) => {
+
   const [clicked, setClicked] = useState(false)
+
+  const locref = useRef(null)
+
+  const isInView =  () => {
+    if(!locref.current) return
+      if (locref.current.getBoundingClientRect() || null) {
+        const rect = locref.current.getBoundingClientRect()
+        const leftPos = rect.left - locref.current.offsetWidth * space
+        return leftPos
+      } else {
+        return null
+      }
+  }
+  
+  const [inView, setInView] = useState(false);
+
+  const positionHandler = useCallback(() => {
+    setInView(isInView());
+  }, []);
+
+  useEffect(() => {
+    setInView(isInView());
+    window.addEventListener("resize", positionHandler);
+    return () => {
+      window.removeEventListener("resize", positionHandler);
+    };
+  }, [positionHandler]);
+
+  const positionDrop = inView ? {left: isInView()} : null;
+
+  const InView = () => {
+    const rect = window.pageYOffset;
+    return rect >= 150 && rect <= 1300;
+  };
+
+  const [View, setView] = useState(false);
+
+  const scrollHandler = useCallback(() => {
+    setView(InView());
+  }, []);
+
+  useEffect(() => {
+    setView(InView());
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [scrollHandler]);
 
   const dropdown = clicked ? "new-drop" : "none-drop"
 
+  const dropRev = clicked ? 'reverse-drop' : 'none-drop'
+
+  const dropup = View ? dropdown : dropRev
+
   return (
-    <nav className={isMobile ? "genres-nav" : "large-genresnav"}>
+    <nav className={isMobile ? "large-genresnav" : "genres-nav"}>
       <div className="overflow-links">
         <ul>
           {NavLinks.map(document => (
@@ -23,12 +76,17 @@ const GenresNav = ({ NavLinks, isMobile }) => {
             </li>
           ))}
           <li
-            onClick={() => {
-              setClicked(!clicked)
+            className='parent'
+            ref={locref}
+            onMouseEnter={()=>{
+              setClicked(true)
+            }}
+            onMouseLeave={()=>{
+              setClicked(false)
             }}
           >
             <button>More Categories</button>
-            <div className={dropdown}>
+            <div className={dropup} style={positionDrop}>
               <ul>
                 {NavLinks.map(doc => (
                   <li>
@@ -50,40 +108,3 @@ const GenresNav = ({ NavLinks, isMobile }) => {
 }
 
 export default GenresNav
-
-{
-  /* <div className="drop">
-          <select placeholder="drop">
-            {NavLinks.map(document => (
-                <option>
-                  <Link
-                  to={document.links}
-                  activeClassName="linkactive"
-                  className="genres-navlinks"
-                >
-                  {document.name}
-                </Link>
-                </option>
-            ))}
-          </select>
-        </div> */
-}
-
-{
-  /* <li>
-          <div className={dropdown}>
-            <Dropdown className="navdrop" text="More Categories" onClick={()=>{setClicked(!clicked)}}>
-              <Dropdown.Menu>
-                {NavLinks.map(doc => (
-                  <Link to={doc.links}>
-                    <Dropdown.Item
-                      className="genres-droplink"
-                      text={doc.name}
-                    />
-                  </Link>
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </li> */
-}

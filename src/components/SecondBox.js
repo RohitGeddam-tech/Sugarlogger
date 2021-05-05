@@ -8,12 +8,18 @@ import Footer from "./components/Footer"
 import FooterMob from "./components/FooterMob"
 import FooterTab from "./components/FooterTab"
 import SEO from "./seo"
+import GenresNav from "../utils/GenresNav"
+import NavLinks from "./components/NavLinks"
 
 const Mob = () => {
   return (
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
+      <div className="genres-mobbar">
+        <GenresNav NavLinks={NavLinks} space="0.15" />
+      </div>
       <SecondMob />
       <FooterMob />
     </>
@@ -25,6 +31,10 @@ const Tab = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
+      <div className="genres-bar">
+        <GenresNav NavLinks={NavLinks} space="0.45" />
+      </div>
       <SecondTab />
       <FooterTab />
     </>
@@ -36,6 +46,10 @@ const Pro = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
+      <div className="genres-bar">
+        <GenresNav NavLinks={NavLinks} space="0.57" />
+      </div>
       <SecondPage />
       <FooterTab />
     </>
@@ -47,6 +61,10 @@ const Desk = () => {
     <>
       <Header />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
+      <div className="genres-bar">
+        <GenresNav NavLinks={NavLinks} space="0.65" />
+      </div>
       <SecondPage />
       <Footer />
     </>
@@ -58,6 +76,10 @@ const Large = () => {
     <>
       <Header />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
+      <div className="genres-bar">
+        <GenresNav NavLinks={NavLinks} space="0" />
+      </div>
       <div className="largesize">
         <div className="largesize-container">
           <SecondPage />
@@ -74,7 +96,9 @@ const Large = () => {
 
 const SecondBox = () => {
   const [isLarge, setLarge] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:1400px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1400px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -83,7 +107,9 @@ const SecondBox = () => {
   }, [isLarge])
 
   const [isPro, setPro] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:1080px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1080px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -92,7 +118,9 @@ const SecondBox = () => {
   }, [isPro])
 
   const [isTab, setTab] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:900px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:900px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -101,7 +129,9 @@ const SecondBox = () => {
   }, [isTab])
 
   const [isMob, setMob] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:550px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:550px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {

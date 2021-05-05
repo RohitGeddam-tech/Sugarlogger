@@ -5,8 +5,6 @@ import banner from "../../images/banner.png"
 import "semantic-ui-css/semantic.min.css"
 import "../css/FirstPage.css"
 import { Dropdown } from "semantic-ui-react"
-import GenresNav from "../../utils/GenresNav"
-import NavLinks from './NavLinks'
 
 const FirstPage = () => {
   function addUnderline(e) {
@@ -67,9 +65,6 @@ const FirstPage = () => {
               </div>
             </div>
           </Link>
-          <div className="genres-bar">
-            <GenresNav NavLinks={NavLinks} />
-          </div>
         </div>
       </div>
     </>

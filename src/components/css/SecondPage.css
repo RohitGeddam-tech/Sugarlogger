@@ -155,6 +155,10 @@ color: #B7B7B7;
     width: 100%;
 }
 
+.cardimage{
+    width: 100%;
+}
+
 .tabboxcard{
     width: 80%;
     display: flex;

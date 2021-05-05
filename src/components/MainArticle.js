@@ -14,6 +14,7 @@ const Mob = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
       <div className="article-padding">
         <Firstarticlen />
       </div>
@@ -27,6 +28,7 @@ const Tab = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
       <FirstTab />
       <FooterTab />
     </>
@@ -38,6 +40,7 @@ const Pro = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
       <FirstDesk />
       <FooterTab />
     </>
@@ -49,6 +52,7 @@ const Desk = () => {
     <>
       <Header />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
       <FirstDesk />
       <Footer />
     </>
@@ -60,6 +64,7 @@ const Large = () => {
     <>
       <Header />
       <SEO title="Home" />
+      <div style={{ paddingTop: "80px" }}></div>
       <div className="largesize">
         <div className="largesize-container">
           <FirstDesk />
