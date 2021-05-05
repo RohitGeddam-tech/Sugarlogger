@@ -23,7 +23,7 @@ const Large = () => {
           <div className="largesize-container">
             <FirstPage />
             <div className="genres-bar">
-              <GenresNav NavLinks={NavLinks} space="0" />
+              <GenresNav NavLinks={NavLinks} space="0" bottom='24%' />
             </div>
             <SecondPage />
           </div>
@@ -46,7 +46,7 @@ const Desk = () => {
       <div style={{ paddingTop: "80px" }}>
         <FirstPage />
         <div className="genres-bar">
-          <GenresNav NavLinks={NavLinks} space="0.65" />
+          <GenresNav NavLinks={NavLinks} space="0.65" bottom='24%'/>
         </div>
         <SecondPage />
       </div>
@@ -63,7 +63,7 @@ const Pro = () => {
       <div style={{ paddingTop: "80px" }}>
         <FirstPage />
         <div className="genres-bar">
-          <GenresNav NavLinks={NavLinks} space="0.57" />
+          <GenresNav NavLinks={NavLinks} space="0.57" bottom='68%' />
         </div>
         <SecondPage />
       </div>
@@ -80,7 +80,7 @@ const Tab = () => {
       <div style={{ paddingTop: "80px" }}>
         <FirstPage />
         <div className="genres-bar">
-          <GenresNav NavLinks={NavLinks} space="0.45" />
+          <GenresNav NavLinks={NavLinks} space="0.45" bottom='58%' />
         </div>
       </div>
       <SecondTab />
@@ -103,7 +103,7 @@ const Mob = () => {
         </div>
         <FirstMob />
         <div className="genres-mobbar">
-          <GenresNav NavLinks={NavLinks} space="0.15" />
+          <GenresNav NavLinks={NavLinks} space="0.15" bottom='100%' />
         </div>
         <SecondMob />
       </div>

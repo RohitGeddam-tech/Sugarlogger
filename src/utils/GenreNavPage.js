@@ -34,11 +34,11 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
     };
   }, [positionHandler]);
 
-  const positionDrop = inView ? {left: isInView()} : null;
+  const positionDrop = inView ? {left: isInView(), bottom:bottom} : null;
 
   const InView = () => {
     const rect = window.pageYOffset;
-    return rect >= 150 && rect <= 1300;
+    return rect >= 0 && rect <= 1300;
   };
 
   const [View, setView] = useState(false);

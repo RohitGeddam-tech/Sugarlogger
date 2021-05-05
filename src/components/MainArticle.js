@@ -14,7 +14,7 @@ const Mob = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="article-padding">
         <Firstarticlen />
       </div>
@@ -108,11 +108,11 @@ const MainArticle = () => {
   }, [isTab])
 
   const [isMob, setMob] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:550px)").matches : null
+    typeof window !== "undefined" ? window.matchMedia("(max-width:650px)").matches : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setMob(window.matchMedia("(max-width:550px)").matches)
+      setMob(window.matchMedia("(max-width:650px)").matches)
     })
   }, [isMob])
 

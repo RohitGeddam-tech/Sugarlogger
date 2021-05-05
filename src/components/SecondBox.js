@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 import FooterMob from "./components/FooterMob"
 import FooterTab from "./components/FooterTab"
 import SEO from "./seo"
-import GenresNav from "../utils/GenresNav"
+import GenresNav from "../utils/GenreNavPage"
 import NavLinks from "./components/NavLinks"
 
 const Mob = () => {
@@ -16,7 +16,7 @@ const Mob = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="genres-mobbar">
         <GenresNav NavLinks={NavLinks} space="0.15" />
       </div>
@@ -31,7 +31,7 @@ const Tab = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="genres-bar">
         <GenresNav NavLinks={NavLinks} space="0.45" />
       </div>
@@ -46,7 +46,7 @@ const Pro = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="genres-bar">
         <GenresNav NavLinks={NavLinks} space="0.57" />
       </div>
@@ -61,7 +61,7 @@ const Desk = () => {
     <>
       <Header />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="genres-bar">
         <GenresNav NavLinks={NavLinks} space="0.65" />
       </div>
@@ -76,7 +76,7 @@ const Large = () => {
     <>
       <Header />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}></div>
+      <div style={{ paddingTop: "100px" }}></div>
       <div className="genres-bar">
         <GenresNav NavLinks={NavLinks} space="0" />
       </div>
