@@ -291,7 +291,8 @@
   display: block;
   position: absolute;
   height: 250px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: visible;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   z-index: 11;
@@ -302,7 +303,8 @@
   position: absolute;
   top: auto;
   height: 250px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: visible;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   z-index: 11;
