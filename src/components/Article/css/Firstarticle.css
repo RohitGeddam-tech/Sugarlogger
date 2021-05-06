@@ -23,7 +23,7 @@
 }
 
 .cardart-detail h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -34,7 +34,7 @@
 }
 
 .cardart-detail p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -82,7 +82,7 @@
 }
 
 .ui.avatar.image h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -98,7 +98,7 @@
 
 .cardart-footer h1 {
   padding-bottom: 2px;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   text-decoration: underline;
   font-style: normal;
   word-spacing: 2px;
@@ -113,7 +113,7 @@
 }
 
 .cardart-footer p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -131,7 +131,7 @@
 }
 
 .article-bottom h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   word-spacing: 2px;
   font-weight: normal;
@@ -169,7 +169,7 @@
   padding-bottom: 20px;
 }
 
-.articlemob-container{
+.articlemob-container {
   width: 100%;
   margin: auto;
   display: flex;
@@ -181,7 +181,7 @@
 }
 
 .first-text p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -212,7 +212,7 @@
 } */
 
 .second-part h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   margin-bottom: 10px !important;
   font-style: normal;
   font-weight: 600;
@@ -225,7 +225,7 @@
 }
 
 .second-part p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -242,7 +242,7 @@
 }
 
 .second-part span {
-  font-family: "SourceSansPro";
+  font-family: helvetica;
   font-style: italic;
   font-weight: normal;
   font-size: 18px;
@@ -267,7 +267,7 @@
   padding: 5px;
 }
 
-.admobbox{
+.admobbox {
   width: 100%;
 }
 
@@ -289,14 +289,14 @@
   padding-bottom: 15px;
 }
 
-.relatedmob-heading{
+.relatedmob-heading {
   width: 100%;
   display: flex;
 }
 
 .related-heading h1 {
   text-align: start;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -320,7 +320,7 @@
   padding-bottom: 20px;
 }
 
-.articletab-container{
+.articletab-container {
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -335,7 +335,7 @@
   flex-flow: column;
 }
 
-.articleB{
+.articleB {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -398,7 +398,7 @@
 }
 
 .cardartdesk-detail h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -409,7 +409,7 @@
 }
 
 .cardartdesk-detail p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -426,7 +426,7 @@
 }
 
 .articledesk-bottom h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -505,7 +505,7 @@
   padding-bottom: 20px !important;
 }
 
-.commentmobbox{
+.commentmobbox {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -513,8 +513,8 @@
   padding-bottom: 20px !important;
 }
 
-.commentmobbox h1{
-  font-family: "SourceSansPro", sans-serif;
+.commentmobbox h1 {
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -525,7 +525,7 @@
 }
 
 .commentbox h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -546,7 +546,7 @@
   display: flex;
 }
 
-.commentmob{
+.commentmob {
   width: 100% !important;
   height: 100px !important;
   border: 0.5px solid #828282;
@@ -554,11 +554,11 @@
   border-radius: 3px;
   margin-bottom: 15px;
   text-align: start;
-  display: flex; 
+  display: flex;
 }
 
 textarea.comment {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -571,8 +571,8 @@ textarea.comment {
   resize: none !important;
 }
 
-textarea.commentmob{
-  font-family: "SourceSansPro", sans-serif;
+textarea.commentmob {
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -586,8 +586,7 @@ textarea.commentmob{
 }
 
 textarea::-webkit-input-placeholder {
-  font-family: "SourceSansPro", sans-serif;
-  font-style: normal;
+  font-family: helvetica;
   font-weight: normal;
   font-size: 18px;
   line-height: 20px;
@@ -597,7 +596,7 @@ textarea::-webkit-input-placeholder {
 }
 
 textarea::-moz-placeholder {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -608,7 +607,7 @@ textarea::-moz-placeholder {
 }
 
 textarea:-ms-input-placeholder {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -619,7 +618,7 @@ textarea:-ms-input-placeholder {
 }
 
 textarea:-moz-placeholder {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -646,7 +645,7 @@ textarea:-moz-placeholder {
   cursor: pointer;
 }
 
-.mob-form{
+.mob-form {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -654,7 +653,7 @@ textarea:-moz-placeholder {
   justify-content: center;
 }
 
-.commentmobbtn{
+.commentmobbtn {
   width: fit-content !important;
   display: flex;
   align-items: center;
@@ -664,7 +663,7 @@ textarea:-moz-placeholder {
   border: none !important;
 }
 
-.commentmobbtn img{
+.commentmobbtn img {
   width: 100% !important;
   background-color: white;
   height: 100%;
@@ -692,7 +691,7 @@ textarea:-moz-placeholder {
 
 .commentbtn p {
   margin-bottom: 2px;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   text-align: center;
   font-style: normal;
   font-weight: 400;
@@ -724,7 +723,7 @@ button.commentbtn {
 }
 
 .first-comment h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   margin-bottom: 10px !important;
   font-style: normal;
   font-weight: 600;
@@ -737,7 +736,7 @@ button.commentbtn {
 }
 
 .first-comment p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   margin-bottom: 10px !important;
@@ -754,7 +753,7 @@ button.commentbtn {
   outline: none !important;
   border: none !important;
   padding: 0 !important;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -784,7 +783,7 @@ button.commentbtn {
   border: none !important;
   padding: 10px !important;
   padding-bottom: 0 !important;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -817,7 +816,6 @@ button.commentbtn {
   padding: 15px;
 }
 
-
 .reply {
   width: 100%;
   display: flex;
@@ -835,7 +833,7 @@ button.commentbtn {
   width: 100%;
   height: 150px;
   outline: none;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -858,12 +856,12 @@ button.commentbtn {
   line-height: 25px;
   display: flex;
   align-items: center;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   color: #282c36;
   margin-bottom: 10px !important;
 }
 
-.reply h2{
+.reply h2 {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -873,11 +871,11 @@ button.commentbtn {
   text-transform: capitalize;
   word-break: break-word;
   margin-left: 5px;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   color: #282c36;
 }
 
-.modal-align button{
+.modal-align button {
   cursor: pointer;
   background-color: transparent !important;
   padding: 0 !important;
@@ -887,13 +885,13 @@ button.commentbtn {
   border: none !important;
 }
 
-.related-padding{
+.related-padding {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.article-padding{
+.article-padding {
   width: 95%;
   margin: auto;
   margin-top: 15px;

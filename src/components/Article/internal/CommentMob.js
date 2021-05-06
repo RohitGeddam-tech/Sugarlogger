@@ -19,7 +19,7 @@ const Comments = () => {
   return (
     <>
       <form
-        className='mob-form'
+        className="mob-form"
         onSubmit={e => {
           e.preventDefault()
           setSubmitted(!submit)

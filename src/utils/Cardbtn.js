@@ -41,9 +41,14 @@ const Cardbtn = ({ activebtn, page, setPage, prevClick, handleClick }) => {
       ) : (
         <>
           {page === 6 ? (
-            <button className="btnprev" onClick={()=>{setPage(0)}}>
-            <i className="large angle left icon"></i>
-          </button>
+            <button
+              className="btnprev"
+              onClick={() => {
+                setPage(0)
+              }}
+            >
+              <i className="large angle left icon"></i>
+            </button>
           ) : (
             <>
               <button className="btnprev" onClick={prevClick}>

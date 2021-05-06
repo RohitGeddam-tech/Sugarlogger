@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import logo from "../../images/SugarloggerLogo.svg"
 import "../css/header.css"
-import NavLinks from './NavBarLinks'
+import NavLinks from "./NavBarLinks"
 
 const Header = () => (
   <header>

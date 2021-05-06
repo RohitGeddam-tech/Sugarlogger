@@ -2,12 +2,14 @@ import * as React from "react"
 import "./css/Footer.css"
 import FooterDesk from "./components/Footer"
 import { useState, useEffect } from "react"
-import Footer from './components/FooterTab'
-import FooterMob from './components/FooterMob'
+import Footer from "./components/FooterTab"
+import FooterMob from "./components/FooterMob"
 
 const Header = () => {
   const [isLarge, setLarge] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:1400px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1400px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -16,7 +18,9 @@ const Header = () => {
   }, [isLarge])
 
   const [isTab, setTab] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:900px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:900px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -25,7 +29,9 @@ const Header = () => {
   }, [isTab])
 
   const [isMob, setMob] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:550px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:550px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {

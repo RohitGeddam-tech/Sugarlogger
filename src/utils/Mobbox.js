@@ -33,7 +33,9 @@ const Mobbox = ({
           </div>
           <div className="card-footer">
             <div className="card-left">
-              <h1>By <h2>{by}</h2></h1>
+              <h1>
+                By <h2>{by}</h2>
+              </h1>
               <p>{date}</p>
             </div>
             <div className="card-right">

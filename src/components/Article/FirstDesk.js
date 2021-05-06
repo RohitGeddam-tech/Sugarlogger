@@ -1,10 +1,10 @@
 import React from "react"
 import "./css/Firstarticle.css"
-import FirstDeskpart from './internal/FirstDeskpart'
-import SecondPart from './internal/SecondPart'
-import Related from './internal/Related'
-import Comments from './internal/Comments'
-import ViewComments from './internal/View'
+import FirstDeskpart from "./internal/FirstDeskpart"
+import SecondPart from "./internal/SecondPart"
+import Related from "./internal/Related"
+import Comments from "./internal/Comments"
+import ViewComments from "./internal/View"
 import banner from "../../images/banner.png"
 import blog from "../../images/blog.png"
 import mint1 from "../../images/Mint1.png"
@@ -19,7 +19,7 @@ const Secondarray = [
     text:
       "One step to living a healthier lifestyle is to be physically active every day. It’s not enough to work out once in a while, especially if you have a sedentary job. You must find activities that get your heart rate up and challenge your body and muscles. There are many ways to stay fit including taking cardio classes, joining a gym, and weight lifting. Make sure you fuel up with healthy smoothies that have protein-rich ingredients for a faster recovery time. You’ll feel so much better and will shed unwanted pounds when you exercise routinely.",
     image: [blog],
-    meta:'Image Credits to photostock.com'
+    meta: "Image Credits to photostock.com",
   },
   {
     id: "2",
@@ -33,8 +33,8 @@ const Secondarray = [
     title: "Get Plenty Of Rest And Sleep",
     text:
       "Sleep is essential to you being able to function to the best of your ability at home and work. Get plenty of sleep and rest to help you live a healthier lifestyle. There are so many negative consequences of not getting enough sleep that it should be a top priority for you. You’ll wake up feeling ready to seize the day and will be able to think more clearly and concentrate better when you’re well-rested. Find a relaxing bedtime routine and configure your bedroom for optimal sleep to help you achieve this goal.",
-    image: [blog, mint1 ,sleep],
-    meta:'Another caption will come here',
+    image: [blog, mint1, sleep],
+    meta: "Another caption will come here",
   },
 ]
 
@@ -53,7 +53,6 @@ const Articlebox = [
   },
 ]
 
-
 const Relatedbox = [
   {
     id: "1",
@@ -66,7 +65,7 @@ const Relatedbox = [
     by: "Kiran Patil",
     date: "26 January, 2021",
     newbtn: "read more",
-    meta:'Image Credits to photostock.com',
+    meta: "Image Credits to photostock.com",
   },
   {
     id: "2",
@@ -91,7 +90,7 @@ const Relatedbox = [
     by: "Kiran Patil",
     date: "26 January, 2021",
     newbtn: "read more",
-    meta:'Another caption will come here',
+    meta: "Another caption will come here",
   },
 ]
 

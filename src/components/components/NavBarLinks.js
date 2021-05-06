@@ -1,4 +1,3 @@
-
 const NavBarLinks = [
   {
     name: "For Path Labs",

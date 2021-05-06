@@ -1,6 +1,6 @@
 import React from "react"
 import MainArticle from "../components/MainArticle"
-import ClientOnly from '../utils/ClientOnly'
+import ClientOnly from "../utils/ClientOnly"
 
 const article = () => {
   return (

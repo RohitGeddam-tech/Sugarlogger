@@ -2,24 +2,23 @@ import * as React from "react"
 import { Link } from "gatsby"
 import call from "../../images/call.png"
 import "../css/Footer.css"
-import {useState} from 'react'
+import { useState } from "react"
 
 const Header = () => {
+  const [search, setSearch] = useState("")
 
-  const [search, setSearch] = useState('')
-
-  const handleChange = (e) => {
+  const handleChange = e => {
     setSearch(e.target.value)
   }
 
   const searchValue = search
 
   const handleSubmit = e => {
-    e.preventDefault();
-    if(search !== ''){
-      console.log('search', searchValue)
+    e.preventDefault()
+    if (search !== "") {
+      console.log("search", searchValue)
     } else {
-      alert('search failed')
+      alert("search failed")
     }
   }
 
@@ -31,7 +30,7 @@ const Header = () => {
           <input
             className="searchpage"
             type="text"
-            name='search'
+            name="search"
             value={search}
             onChange={handleChange}
             placeholder="Enter your email ID"

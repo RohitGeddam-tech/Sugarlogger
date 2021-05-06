@@ -31,7 +31,7 @@
 }
 
 .link-nav {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -58,7 +58,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: white;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -75,7 +75,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: white;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -90,20 +90,8 @@
 
 .login-tab:hover {
   border: 1px solid #282c36;
-  box-sizing: border-box;
-  border-radius: 5px;
   background-color: #282c36;
-  font-family: "SourceSansPro", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
-  text-align: center;
-  text-transform: capitalize;
   color: #fff;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding: 7px 14px;
 }
 
 .starttab {
@@ -112,7 +100,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: #d44638;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -126,22 +114,9 @@
 }
 
 .starttab:hover {
-  padding: 14px 70px;
   border: 1px solid #d44638;
-  box-sizing: border-box;
-  border-radius: 5px;
   background-color: #fff;
-  font-family: "SourceSansPro", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
   color: #d44638;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 .link-activenav {

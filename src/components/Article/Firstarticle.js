@@ -6,11 +6,11 @@ import mint1 from "../../images/Mint1.png"
 import mint2 from "../../images/Mint2.png"
 import mint3 from "../../images/Mint4.png"
 import sleep from "../../images/Sleep.png"
-import Comments from './internal/CommentMob'
-import ViewComments from './internal/View'
-import Secondpart_art from '../../utils/Secondpart_art'
-import Mobbox from '../../utils/Mobbox'
-import Cardbox from '../components/CardBox'
+import Comments from "./internal/CommentMob"
+import ViewComments from "./internal/View"
+import Secondpart_art from "../../utils/Secondpart_art"
+import Mobbox from "../../utils/Mobbox"
+import Cardbox from "../components/CardBox"
 import "./css/Firstarticle.css"
 import Modal from "../../utils/Modal"
 
@@ -50,7 +50,9 @@ const Firstarticle = () => {
                 </div>
               </div>
               <div className="iconcard-details">
-              <div className="ui avatar image"><h1>KP</h1></div>
+                <div className="ui avatar image">
+                  <h1>KP</h1>
+                </div>
                 <div className="cardart-footer">
                   <h1>By {doc.by}</h1>
                   <p>on {doc.date}</p>
@@ -78,7 +80,6 @@ const Firstarticle = () => {
   )
 }
 
-
 const Secondarray = [
   {
     id: "1",
@@ -86,7 +87,7 @@ const Secondarray = [
     text:
       "One step to living a healthier lifestyle is to be physically active every day. It’s not enough to work out once in a while, especially if you have a sedentary job. You must find activities that get your heart rate up and challenge your body and muscles. There are many ways to stay fit including taking cardio classes, joining a gym, and weight lifting. Make sure you fuel up with healthy smoothies that have protein-rich ingredients for a faster recovery time. You’ll feel so much better and will shed unwanted pounds when you exercise routinely.",
     image: [blog],
-    meta:'Image Credits to photostock.com'
+    meta: "Image Credits to photostock.com",
   },
   {
     id: "2",
@@ -100,8 +101,8 @@ const Secondarray = [
     title: "Get Plenty Of Rest And Sleep",
     text:
       "Sleep is essential to you being able to function to the best of your ability at home and work. Get plenty of sleep and rest to help you live a healthier lifestyle. There are so many negative consequences of not getting enough sleep that it should be a top priority for you. You’ll wake up feeling ready to seize the day and will be able to think more clearly and concentrate better when you’re well-rested. Find a relaxing bedtime routine and configure your bedroom for optimal sleep to help you achieve this goal.",
-    image: [blog, mint1 ,sleep],
-    meta:'Another caption will come here',
+    image: [blog, mint1, sleep],
+    meta: "Another caption will come here",
   },
 ]
 
@@ -150,18 +151,26 @@ const FirstArticle = () => {
         <h1>View comments</h1>
         <ViewComments />
       </div>
-      <div className="diviider" style={{width:'100% !important'}}></div>
-      <div className='related-padding'>
-      <div className="relatedmob-heading">
-        <h1>Related Articles</h1>
-      </div>
-      {Cardbox.slice(0,3).map(doc => {
-        return (
-          <Mobbox id={doc.id} image={doc.image} buttonname={doc.buttonname} btnname={doc.btnname} Title={doc.Title} 
-            para={doc.para} by={doc.by} date={doc.date} newbtn={doc.newbtn}
-          />
-        )
-      })}
+      <div className="diviider" style={{ width: "100% !important" }}></div>
+      <div className="related-padding">
+        <div className="relatedmob-heading">
+          <h1>Related Articles</h1>
+        </div>
+        {Cardbox.slice(0, 3).map(doc => {
+          return (
+            <Mobbox
+              id={doc.id}
+              image={doc.image}
+              buttonname={doc.buttonname}
+              btnname={doc.btnname}
+              Title={doc.Title}
+              para={doc.para}
+              by={doc.by}
+              date={doc.date}
+              newbtn={doc.newbtn}
+            />
+          )
+        })}
       </div>
     </>
   )

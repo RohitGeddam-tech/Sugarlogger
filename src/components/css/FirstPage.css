@@ -14,7 +14,7 @@
   margin-top: 10px;
 }
 
-.bannermob-container{
+.bannermob-container {
   width: 95%;
   display: flex;
   flex-flow: column;
@@ -67,7 +67,7 @@
 }
 
 .banner-title h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -91,7 +91,7 @@
   padding-bottom: 1px !important;
   border: 0.6px solid #d44638;
   border-radius: 3px;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -118,7 +118,7 @@
 }
 
 .banner-data h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -129,7 +129,7 @@
 }
 
 .banner-data p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -152,7 +152,7 @@
 }
 
 .right h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -165,8 +165,8 @@
   margin-left: 3px;
 }
 
-.right h2{
-  font-family: "SourceSansPro", sans-serif;
+.right h2 {
+  font-family: helvetica;
   font-style: normal;
   height: auto;
   font-weight: 600;
@@ -175,11 +175,11 @@
   margin-bottom: 0 !important;
   text-transform: capitalize;
   text-decoration: none;
-  color: #282C36;
+  color: #282c36;
 }
 
 .right p {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -193,7 +193,7 @@
 }
 
 .left h1 {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -260,12 +260,12 @@
     scrollbar-width: none;  */
 }
 
-.overflow-links button{
+.overflow-links button {
   border: none;
   background-color: transparent;
   outline: none;
   white-space: nowrap !important;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -279,7 +279,7 @@
   color: #282c36;
 }
 
-.overflow-links>ul{
+.overflow-links > ul {
   width: 1300px;
   display: flex;
   align-items: center;
@@ -287,7 +287,7 @@
   margin-bottom: 0 !important;
 }
 
-.new-drop{
+.new-drop {
   display: block;
   position: absolute;
   height: 250px;
@@ -298,7 +298,7 @@
   z-index: 11;
 }
 
-.reverse-drop{
+.reverse-drop {
   display: block;
   position: absolute;
   top: auto;
@@ -310,7 +310,7 @@
   z-index: 11;
 }
 
-.reverse-drop ul{
+.reverse-drop ul {
   display: block;
   width: fit-content !important;
   cursor: pointer;
@@ -318,24 +318,24 @@
   background-color: white;
 }
 
-.new-drop ul{
+.new-drop ul {
   display: block;
   width: fit-content !important;
   cursor: pointer;
   background-color: white;
 }
 
-.none-drop{
+.none-drop {
   display: none;
 }
 
-.overflow-links{
+.overflow-links {
   display: inline-flex;
   /* position: relative; */
   width: 100%;
 }
 
-.overflow-links ul{
+.overflow-links ul {
   /* overflow-x: auto;
   overflow-y: hidden; */
   overflow: scroll;
@@ -351,7 +351,7 @@
   display: none !important;
 }
 
-.overflow-links li{
+.overflow-links li {
   padding-bottom: 0 !important;
 }
 
@@ -359,7 +359,7 @@
   display: flex;
   white-space: nowrap !important;
   align-items: center;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -390,7 +390,7 @@
   position: relative;
 }
 
-.absolute-drop{
+.absolute-drop {
   width: fit-content !important;
   display: flex;
   flex-flow: column;
@@ -405,7 +405,7 @@
 }
 
 .ui.dropdown > .text {
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -420,7 +420,7 @@
 
 .genres-droplink {
   cursor: pointer;
-  font-family: "SourceSansPro", sans-serif;
+  font-family: helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -432,8 +432,8 @@
   background-color: white;
 }
 
-.genres-droplink:hover{
-  color: #D44638;
+.genres-droplink:hover {
+  color: #d44638;
 }
 
 .linkactive {
@@ -442,7 +442,7 @@
   color: #d44638;
 }
 
-.linkactive:hover{
+.linkactive:hover {
   border-radius: 3px;
   color: #d44638;
   border: 1px solid #d44638;
@@ -460,11 +460,11 @@
   margin-bottom: 3%;
 }
 
-.home-header{
+.home-header {
   width: 100%;
 }
 
-.home-container{
+.home-container {
   width: 95%;
   display: flex;
   flex-flow: column;
@@ -474,29 +474,29 @@
   /* margin-bottom: 10px; */
 }
 
-.home-container h1{
+.home-container h1 {
   margin-bottom: 10px !important;
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: bold;
-font-size: 40px;
-line-height: 49px;
-text-transform: uppercase;
-display: flex;
-align-items: center;
-color: #282C36;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #282c36;
 }
 
-.home-container h2{
+.home-container h2 {
   margin-top: 5px !important;
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-display: flex;
-align-items: center;
-color: #D44638;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  color: #d44638;
 }
 
 /* .bannermobbox:hover{

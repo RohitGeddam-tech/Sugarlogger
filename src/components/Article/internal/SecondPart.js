@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import Secondpart_art from '../../../utils/Secondpart_art'
+import Secondpart_art from "../../../utils/Secondpart_art"
 
-const SecondPart = ({Secondarray}) => {
+const SecondPart = ({ Secondarray }) => {
   return (
     <>
       <div className="article-container">

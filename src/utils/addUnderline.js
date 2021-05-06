@@ -1,7 +1,7 @@
-import {useCallback} from 'react'
+import { useCallback } from "react"
 
-const addUnderline = (e) => {
-    e.target.style.textDecoration = "underline"
-  };
+const addUnderline = e => {
+  e.target.style.textDecoration = "underline"
+}
 
 export default addUnderline

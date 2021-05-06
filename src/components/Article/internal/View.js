@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Modal } from "semantic-ui-react"
-import Popup from '../../../utils/Modal'
+import Popup from "../../../utils/Modal"
 
 const commentsArray = [
   {

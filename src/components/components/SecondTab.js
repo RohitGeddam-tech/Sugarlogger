@@ -32,7 +32,9 @@ const SecondPage = () => {
             </div>
             <div className="card-footer">
               <div className="card-left">
-                <h1>By <h2>{doc.by}</h2></h1>
+                <h1>
+                  By <h2>{doc.by}</h2>
+                </h1>
                 <p>{doc.date}</p>
               </div>
               <div className="card-right">
@@ -76,11 +78,17 @@ const SecondPage = () => {
     <>
       <div className="second-container">
         <div className="searchbox">
-          <Search placeholder='Search' />
+          <Search placeholder="Search" />
         </div>
         <div className="cardBox">
           <div className="allCards">{Row}</div>
-          <Cardbtn page={page} setPage={setPage} prevClick={prevClick} handleClick={handleClick} activebtn={activebtn} />
+          <Cardbtn
+            page={page}
+            setPage={setPage}
+            prevClick={prevClick}
+            handleClick={handleClick}
+            activebtn={activebtn}
+          />
         </div>
       </div>
     </>

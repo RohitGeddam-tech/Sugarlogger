@@ -45,7 +45,7 @@ const SecondMob = () => {
     <>
       <div className="secondmob-container">
         <div className="searchmobbox">
-          <Search placeholder='Search' />
+          <Search placeholder="Search" />
         </div>
         <div className="cardMobBox">
           <div className="allCards">{Row}</div>

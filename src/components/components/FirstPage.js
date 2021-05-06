@@ -46,7 +46,7 @@ const FirstPage = () => {
               </div>
               <div className="banner-footer">
                 <div className="right">
-                  <div className='colorOrange'>
+                  <div className="colorOrange">
                     <h2>By</h2>
                     <h1>Kiran Patil</h1>
                   </div>

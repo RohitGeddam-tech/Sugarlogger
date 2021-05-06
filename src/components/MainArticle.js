@@ -81,7 +81,9 @@ const Large = () => {
 
 const MainArticle = () => {
   const [isLarge, setLarge] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:1400px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1400px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -90,7 +92,9 @@ const MainArticle = () => {
   }, [isLarge])
 
   const [isPro, setPro] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:1080px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1080px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -99,7 +103,9 @@ const MainArticle = () => {
   }, [isPro])
 
   const [isTab, setTab] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:900px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:900px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -108,7 +114,9 @@ const MainArticle = () => {
   }, [isTab])
 
   const [isMob, setMob] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width:650px)").matches : null
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:650px)").matches
+      : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {

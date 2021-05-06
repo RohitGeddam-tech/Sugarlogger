@@ -3,61 +3,60 @@ import { Dropdown } from "semantic-ui-react"
 import { Link } from "gatsby"
 
 const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
-
   const [clicked, setClicked] = useState(false)
 
   const locref = useRef(null)
 
-  const isInView =  () => {
-    if(!locref.current) return
-      if (locref.current.getBoundingClientRect() || null) {
-        const rect = locref.current.getBoundingClientRect()
-        const leftPos = rect.left - locref.current.offsetWidth * 0
-        console.log(leftPos)
-        return leftPos
-      } else {
-        return null
-      }
+  const isInView = () => {
+    if (!locref.current) return
+    if (locref.current.getBoundingClientRect() || null) {
+      const rect = locref.current.getBoundingClientRect()
+      const leftPos = rect.left - locref.current.offsetWidth * 0
+      console.log(leftPos)
+      return leftPos
+    } else {
+      return null
+    }
   }
-  
-  const [inView, setInView] = useState(false);
+
+  const [inView, setInView] = useState(false)
 
   const positionHandler = useCallback(() => {
-    setInView(isInView());
-  }, []);
+    setInView(isInView())
+  }, [])
 
   useEffect(() => {
-    setInView(isInView());
-    window.addEventListener("resize", positionHandler);
+    setInView(isInView())
+    window.addEventListener("resize", positionHandler)
     return () => {
-      window.removeEventListener("resize", positionHandler);
-    };
-  }, [positionHandler]);
+      window.removeEventListener("resize", positionHandler)
+    }
+  }, [positionHandler])
 
-  const positionDrop = inView ? {left: isInView()} : null;
+  const positionDrop = inView ? { left: isInView() } : null
 
   const InView = () => {
-    const rect = window.pageYOffset;
-    return rect >= 150 && rect <= 1300;
-  };
+    const rect = window.pageYOffset
+    return rect >= 150 && rect <= 1300
+  }
 
-  const [View, setView] = useState(false);
+  const [View, setView] = useState(false)
 
   const scrollHandler = useCallback(() => {
-    setView(InView());
-  }, []);
+    setView(InView())
+  }, [])
 
   useEffect(() => {
-    setView(InView());
-    window.addEventListener("scroll", scrollHandler);
+    setView(InView())
+    window.addEventListener("scroll", scrollHandler)
     return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, [scrollHandler]);
+      window.removeEventListener("scroll", scrollHandler)
+    }
+  }, [scrollHandler])
 
   const dropdown = clicked ? "new-drop" : "none-drop"
 
-  const dropRev = clicked ? 'reverse-drop' : 'none-drop'
+  const dropRev = clicked ? "reverse-drop" : "none-drop"
 
   const dropup = View ? dropdown : dropRev
 
@@ -77,12 +76,15 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
             </li>
           ))}
           <li
-            className='parent'
+            className="parent"
             ref={locref}
-            onMouseEnter={()=>{
+            onClick={() => {
+              setClicked(!clicked)
+            }}
+            onMouseEnter={() => {
               setClicked(true)
             }}
-            onMouseLeave={()=>{
+            onMouseLeave={() => {
               setClicked(false)
             }}
           >

@@ -1,24 +1,22 @@
-import React from 'react'
+import React from "react"
 
-const Secondpart_art = ({Secondarray}) => {
-    return (
-        <>
-        <div className="first-text">
+const Secondpart_art = ({ Secondarray }) => {
+  return (
+    <>
+      <div className="first-text">
         <p>
-          Wanting to be healthier and get into better shape physically are
-          great goals to have. However, you won’t see much transformation if
-          you think about it but don’t take any actions to change your ways.
+          Wanting to be healthier and get into better shape physically are great
+          goals to have. However, you won’t see much transformation if you think
+          about it but don’t take any actions to change your ways.
         </p>
         <p>
-          You’ll be glad to hear that there are four steps you can take
-          starting today that will put you on track to living a healthier
-          lifestyle. You’ll feel better and have more natural energy when you
-          take proper care of yourself and cut out any bad or poor habits that
-          may be keeping you from greatness. Let these ideas inspire you to
-          continue to find ways to improve your wellbeing and health over
-          time.
+          You’ll be glad to hear that there are four steps you can take starting
+          today that will put you on track to living a healthier lifestyle.
+          You’ll feel better and have more natural energy when you take proper
+          care of yourself and cut out any bad or poor habits that may be
+          keeping you from greatness. Let these ideas inspire you to continue to
+          find ways to improve your wellbeing and health over time.
         </p>
-        -
       </div>
       <div className="second-part">
         {Secondarray.map(doc => {
@@ -105,8 +103,8 @@ const Secondpart_art = ({Secondarray}) => {
           )
         })}
       </div>
-        </>
-    )
+    </>
+  )
 }
 
 export default Secondpart_art
