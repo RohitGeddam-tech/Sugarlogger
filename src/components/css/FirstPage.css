@@ -87,7 +87,7 @@
 
 .bannerbtn {
   width: auto;
-  padding: 2px 12px !important;
+  padding: 2px 15px !important;
   padding-bottom: 1px !important;
   border: 0.6px solid #d44638;
   border-radius: 3px;
@@ -95,8 +95,10 @@
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 15px;
   margin-left: 10px;
+  margin-top: 5px;
+  white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
   color: #d44638;

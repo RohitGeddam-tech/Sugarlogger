@@ -4,17 +4,10 @@ import { Link } from "gatsby"
 import banner from "../../images/banner.png"
 import "semantic-ui-css/semantic.min.css"
 import "../css/FirstPage.css"
-import { Dropdown } from "semantic-ui-react"
+import addUnderline from '../../utils/addUnderline'
+import remUnderline from '../../utils/remUnderline'
 
 const FirstPage = () => {
-  function addUnderline(e) {
-    e.target.style.textDecoration = "underline"
-  }
-
-  function remUnderline(e) {
-    e.target.style.textDecoration = "none"
-  }
-
   return (
     <>
       <div className="banner">
