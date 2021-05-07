@@ -26,7 +26,10 @@ const FirstDeskpart = ({ Articlearray }) => {
                   <h1>KP</h1>
                 </div>
                 <div className="cardart-footer">
-                  <h1>By {doc.by}</h1>
+                  <div className='card-color'>
+                  <h2>By</h2>
+                  <h1>{doc.by}</h1>
+                  </div>
                   <p>on {doc.date}</p>
                 </div>
               </div>

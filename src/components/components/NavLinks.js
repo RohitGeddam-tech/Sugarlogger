@@ -1,5 +1,3 @@
-import React from "react"
-
 const NavLinks = [
   {
     name: "Latest",
@@ -7,31 +5,31 @@ const NavLinks = [
   },
   {
     name: "Trending",
-    links: "/page-2/",
+    links: "/trending/",
   },
   {
     name: "Yoga",
-    links: "/page-2/",
+    links: "/yoga/",
   },
   {
     name: "Diet Food",
-    links: "/page-2/",
+    links: "/diet/",
   },
   {
     name: "Home Remedies",
-    links: "/page-2/",
+    links: "/homeRemedies/",
   },
   {
     name: "Fitness",
-    links: "/page-2/",
+    links: "/fitness/",
   },
   {
     name: "Diabetes",
-    links: "/page-2/",
+    links: "/diabetes/",
   },
   {
     name: "Ayurvedic",
-    links: "/page-2/",
+    links: "/ayurvedic/",
   },
 ]
 

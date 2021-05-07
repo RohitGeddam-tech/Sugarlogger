@@ -14,7 +14,7 @@ const SecondPage = () => {
 
   const pageVisited = page * perPage
 
-  const Row = Cardbox.slice(pageVisited, pageVisited + perPage).map(doc => {
+  const Row = Cardbox.reverse().slice(pageVisited, pageVisited + perPage).map(doc => {
     return (
       <Link to="/article/" className="boxcard" key={doc.id}>
         <div className="cardimage">
@@ -65,6 +65,16 @@ const SecondPage = () => {
   }
 
   const activebtn = page === 0 ? "inactive" : "activebtn"
+
+  const check = () => {
+    if(Row === ''){
+      return 'empty row'
+    }
+  }
+
+  console.log('card length',Cardbox.length)
+
+  console.log(check())
 
   return (
     <>
