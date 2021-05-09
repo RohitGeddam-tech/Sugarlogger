@@ -20,7 +20,11 @@ const SecondMob = () => {
   const Row = CardDetail.reverse()
     .slice(pageVisited, pageCalci)
     .map((doc, index) => {
-      return <div className='inherit-mobcard' key={index}>{doc.body}</div>
+      return (
+        <div className="inherit-mobcard" key={index}>
+          {doc.body}
+        </div>
+      )
     })
 
   const NewMobbox = () => {
@@ -46,7 +50,8 @@ const SecondMob = () => {
                       name
                     }
                     author {
-                      username
+                      firstname
+                      lastname
                     }
                     published_at
                   }
@@ -59,11 +64,7 @@ const SecondMob = () => {
               .reverse()
               .slice(pageVisited, pageCalci)
               .map(doc => (
-                <Link
-                  to="/article/"
-                  className="Mobobcard"
-                  key={doc.node.id}
-                >
+                <Link to="/article/" className="Mobobcard" key={doc.node.id}>
                   <div className="Mobboxcard">
                     <div className="cardimage">
                       <img
@@ -88,7 +89,11 @@ const SecondMob = () => {
                       <div className="card-footer">
                         <div className="card-left">
                           <h1>
-                            By <h2>{doc.node.author.username}</h2>
+                            By{" "}
+                            <h2>
+                              {data.strapiBlogs.author.firstname}{" "}
+                              {data.strapiBlogs.author.lastname}
+                            </h2>
                           </h1>
                           <p>{doc.node.published_at.slice(0, 10)}</p>
                         </div>

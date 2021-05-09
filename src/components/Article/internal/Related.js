@@ -87,7 +87,8 @@ const RelatedNew = () => {
                     name
                   }
                   author {
-                    username
+                    firstname
+                    lastname
                   }
                   published_at
                 }
@@ -108,13 +109,13 @@ const RelatedNew = () => {
                 <div className="cardinfo">
                   <div className="card-start" style={{ paddingTop: "10px" }}>
                     <div className="card-genre">
-                    {doc.node.categories.map(document => (
-                          <button className="card-btn">{document.name}</button>
-                        ))}
+                      {doc.node.categories.map(document => (
+                        <button className="card-btn">{document.name}</button>
+                      ))}
                     </div>
                     <div className="cardartdesk-detail">
-                    <h1>{doc.node.title}</h1>
-                        <p>{doc.node.description}</p>
+                      <h1>{doc.node.title}</h1>
+                      <p>{doc.node.description}</p>
                     </div>
                   </div>
                   <div className="iconcard-details">
@@ -124,10 +125,15 @@ const RelatedNew = () => {
                     <div className="cardrel-footer">
                       <div className="right">
                         <div className="colorOrange">
-                          <h2>By</h2>
-                          <h1>{doc.node.author.username}</h1>
+                          <div className="card-color">
+                            <h2>By</h2>
+                            <h1>
+                              {doc.node.author.firstname}{" "}
+                              {doc.node.author.lastname}
+                            </h1>
+                          </div>
                         </div>
-                        <p>{doc.node.published_at.slice(0,10)}</p>
+                        <p>{doc.node.published_at.slice(0, 10)}</p>
                       </div>
                       <div className="left">
                         <Link to="/article/">

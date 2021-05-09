@@ -105,7 +105,8 @@ const FirstMobArticle = () => {
               }
               published_at
               author {
-                username
+                firstname
+                lastname
               }
             }
           }
@@ -137,7 +138,13 @@ const FirstMobArticle = () => {
                       <h1>JK</h1>
                     </div>
                     <div className="cardart-footer">
-                      <h1>By {data.strapiBlogs.author.username}</h1>
+                      <div className="card-color">
+                        <h2>By</h2>
+                        <h1>
+                          {data.strapiBlogs.author.firstname}{" "}
+                          {data.strapiBlogs.author.lastname}
+                        </h1>
+                      </div>{" "}
                       <p>on {data.strapiBlogs.published_at}</p>
                     </div>
                   </div>

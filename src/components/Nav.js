@@ -58,7 +58,7 @@ const TestMob = () => {
         )}
         {isActive ? (
           <div className="fade">
-            {NavLinks.map(document => (
+            {/* {NavLinks.map(document => (
               <Link
                 className="link-nav"
                 activeClassName="link-activenav"
@@ -66,7 +66,14 @@ const TestMob = () => {
               >
                 {document.name}
               </Link>
-            ))}
+            ))} */}
+
+            <Link className="link-nav">For Path Labs</Link>
+            <Link className="link-nav">For Patients</Link>
+            <Link className="link-nav">For Doctors</Link>
+            <Link className="link-activenav">Blogs</Link>
+            <Link className="link-nav">About Us</Link>
+            <Link className="link-nav">Contact Us</Link>
             <Link to="/">
               <button className="logintab">Login</button>
             </Link>

@@ -93,7 +93,8 @@ const FirstMobNew = () => {
               }
               published_at
               author {
-                username
+                firstname
+                lastname
               }
             }
           }
@@ -130,7 +131,10 @@ const FirstMobNew = () => {
                         <div className="right">
                           <div className="colorOrange">
                             <h2>By</h2>
-                            <h1>{data.strapiBlogs.author.username}</h1>
+                            <h1>
+                              {data.strapiBlogs.author.firstname}{" "}
+                              {data.strapiBlogs.author.lastname}
+                            </h1>
                           </div>
                           <p>{data.strapiBlogs.published_at.slice(0, 10)}</p>
                         </div>

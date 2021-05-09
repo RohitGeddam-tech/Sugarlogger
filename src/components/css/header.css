@@ -48,6 +48,18 @@ header {
 
 .link-active {
   color: #d44638 !important;
+  margin-left: 20px;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  white-space: nowrap !important;
 }
 
 .login {

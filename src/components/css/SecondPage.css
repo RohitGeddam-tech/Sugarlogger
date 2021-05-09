@@ -113,7 +113,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 15px;
   padding: 10px;
   background: #ffffff;
   border-radius: 5px;
@@ -125,13 +124,12 @@
   flex-flow: column;
   align-items: center;
   margin: 15px;
-  padding: 10px;
   background: #ffffff;
   border-radius: 5px;
 }
 
 .bottomgap{
-  height: 20px;
+  height: 10px;
 }
 
 .tabcard {

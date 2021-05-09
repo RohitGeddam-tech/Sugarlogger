@@ -13,7 +13,7 @@ const Header = () => (
         </Link>
       </div>
       <div className="nav-links">
-        {NavLinks.map(document => (
+        {/* {NavLinks.map(document => (
           <Link
             className="link-name"
             activeClassName="link-active"
@@ -21,7 +21,13 @@ const Header = () => (
           >
             {document.name}
           </Link>
-        ))}
+        ))} */}
+        <Link className="link-name">For Path Labs</Link>
+        <Link className="link-name">For Patients</Link>
+        <Link className="link-name">For Doctors</Link>
+        <Link className="link-active">Blogs</Link>
+        <Link className="link-name">About Us</Link>
+        <Link className="link-name">Contact Us</Link>
         <Link to="/">
           <button className="login">Login</button>
         </Link>

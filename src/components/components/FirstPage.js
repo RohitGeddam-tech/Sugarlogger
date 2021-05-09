@@ -32,7 +32,8 @@ const FirstPage = () => {
               }
               published_at
               author {
-                username
+                firstname
+                lastname
               }
             }
           }
@@ -70,9 +71,12 @@ const FirstPage = () => {
                       <div className="right">
                         <div className="colorOrange">
                           <h2>By</h2>
-                          <h1>{data.strapiBlogs.author.username}</h1>
+                          <h1>
+                            {data.strapiBlogs.author.firstname}{" "}
+                            {data.strapiBlogs.author.lastname}
+                          </h1>
                         </div>
-                        <p>{data.strapiBlogs.published_at.slice(0,10)}</p>
+                        <p>{data.strapiBlogs.published_at.slice(0, 10)}</p>
                       </div>
                       <div className="left">
                         <Link to="/article/">

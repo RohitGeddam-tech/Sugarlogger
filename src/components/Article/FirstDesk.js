@@ -11,7 +11,7 @@ import mint1 from "../../images/Mint1.png"
 import mint2 from "../../images/Mint2.png"
 import mint3 from "../../images/Mint4.png"
 import sleep from "../../images/Sleep.png"
-import { StaticQuery,graphql, Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 const FirstDesk = () => {
   return (
@@ -56,7 +56,8 @@ const FirstDesk = () => {
                     }
                     published_at
                     author {
-                      username
+                      firstname
+                      lastname
                     }
                   }
                 }
@@ -93,9 +94,14 @@ const FirstDesk = () => {
                           <div className="cardart-footer">
                             <div className="card-color">
                               <h2>By</h2>
-                              <h1>{data.strapiBlogs.author.username}</h1>
+                              <h1>
+                                {data.strapiBlogs.author.firstname}{" "}
+                                {data.strapiBlogs.author.lastname}
+                              </h1>
                             </div>
-                            <p>on {data.strapiBlogs.published_at.slice(0,10)}</p>
+                            <p>
+                              on {data.strapiBlogs.published_at.slice(0, 10)}
+                            </p>
                           </div>
                         </div>
                         <div className="articledesk-bottom">

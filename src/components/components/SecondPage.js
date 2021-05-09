@@ -22,7 +22,11 @@ const SecondPage = ({ data }) => {
   const Row = Cardbox.reverse()
     .slice(pageVisited, pageCalci)
     .map((doc, index) => {
-      return <div className='inherit-boxcard' key={index}>{doc.body}</div>
+      return (
+        <div className="inherit-boxcard" key={index}>
+          {doc.body}
+        </div>
+      )
     })
 
   const NewerRow = () => {
@@ -48,7 +52,8 @@ const SecondPage = ({ data }) => {
                       name
                     }
                     author {
-                      username
+                      firstname
+                      lastname
                     }
                     published_at
                   }
@@ -83,7 +88,11 @@ const SecondPage = ({ data }) => {
                     <div className="card-footer">
                       <div className="card-left">
                         <h1>
-                          By <h2>{doc.node.author.username}</h2>
+                          By{" "}
+                          <h2>
+                            {data.strapiBlogs.author.firstname}{" "}
+                            {data.strapiBlogs.author.lastname}
+                          </h2>
                         </h1>
                         <p>{doc.node.published_at}</p>
                       </div>
