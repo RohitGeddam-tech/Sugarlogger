@@ -1,701 +1,82 @@
 import banner from "../../images/banner.png"
+import React from 'react'
+import NewRow from "./NewRow"
 
 const Cardbox = [
   {
-    id: "1",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "2",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "3",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "4",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "5",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "6",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "7",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "8",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "9",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "10",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "11",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "12",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "13",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "14",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "15",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "16",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "17",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "18",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "19",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "20",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "21",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "22",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "23",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "24",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
   {
-    id: "25",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "26",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "27",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "28",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "29",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "1",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "2",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "3",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "4",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "5",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "6",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "7",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "8",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "9",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "10",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "11",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "12",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "13",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "14",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "15",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "16",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "17",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "18",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "19",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "20",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "21",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "22",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "23",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "24",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "25",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "26",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "27",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "28",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
-  },
-  {
-    id: "29",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January 2021",
-    newbtn: "read more",
+    body: <NewRow />
   },
 ]
 

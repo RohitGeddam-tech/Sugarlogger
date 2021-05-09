@@ -14,6 +14,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'https://blogcms.sugarlogger.com',
+        contentTypes: [ 
+          'categories',
+          'blogs'
+        ],
+        queryLimit: 10000,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

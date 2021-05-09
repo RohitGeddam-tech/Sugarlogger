@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import banner from "../../images/banner.png"
 import blog from "../../images/blog.png"
 import mint1 from "../../images/Mint1.png"
@@ -14,68 +14,153 @@ import Cardbox from "../components/CardBox"
 import "./css/Firstarticle.css"
 import Modal from "../../utils/Modal"
 
-const Articlebox = [
-  {
-    id: "1",
-    image: banner,
-    buttonname: "DietFood",
-    btnname: "Fitness",
-    Title: "7 Health Food To Eat",
-    para:
-      "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
-    by: "Kiran Patil",
-    date: "26 January, 2021",
-    newbtn: "read more",
-  },
-]
+// const Articlebox = [
+//   {
+//     id: "1",
+//     image: banner,
+//     buttonname: "DietFood",
+//     btnname: "Fitness",
+//     Title: "7 Health Food To Eat",
+//     para:
+//       "Lorem ipsum dolor sit amet, consectetur aipiscing elit, sed do eiusmod tempor ut labore et dolore ut labore et dolore.",
+//     by: "Kiran Patil",
+//     date: "26 January, 2021",
+//     newbtn: "read more",
+//   },
+// ]
 
-const Firstarticle = () => {
+// const Firstarticle = () => {
+//   return (
+//     <>
+//       {Articlebox.map(doc => (
+//         <div className="Mobcard" key={doc.id}>
+//           <div className="articleboxcard">
+//             <div className="cardimage">
+//               <img src={doc.image} alt="banner" />
+//             </div>
+//             <div className="cardinfo">
+//               <div className="card-start">
+//                 <div className="card-genre">
+//                   <button className="card-btn">{doc.buttonname}</button>
+//                   <button className="card-btn">{doc.btnname}</button>
+//                 </div>
+//                 <div className="cardart-detail">
+//                   <h1>{doc.Title}</h1>
+//                   <p>{doc.para}</p>
+//                 </div>
+//               </div>
+//               <div className="iconcard-details">
+//                 <div className="ui avatar image">
+//                   <h1>KP</h1>
+//                 </div>
+//                 <div className="cardart-footer">
+//                   <h1>By {doc.by}</h1>
+//                   <p>on {doc.date}</p>
+//                 </div>
+//               </div>
+//               <div className="article-bottom">
+//                 <h1> Share : </h1>
+//                 <div className="article-icons">
+//                   <Link to="/page-2/">
+//                     <i className="big facebook icon"></i>
+//                   </Link>
+//                   <Link to="/page-2/">
+//                     <i className="big instagram icon"></i>
+//                   </Link>
+//                   <Link to="/page-2/">
+//                     <i className="big twitter square icon"></i>
+//                   </Link>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       ))}
+//     </>
+//   )
+// }
+
+const FirstMobArticle = () => {
   return (
     <>
-      {Articlebox.map(doc => (
-        <div className="Mobcard" key={doc.id}>
-          <div className="articleboxcard">
-            <div className="cardimage">
-              <img src={doc.image} alt="banner" />
+      <StaticQuery
+        query={graphql`
+          query mobilefirstarticlequery {
+            strapiBlogs {
+              id
+              title
+              description
+              tag {
+                name
+              }
+              image {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
+                }
+              }
+              categories {
+                name
+              }
+              published_at
+              author {
+                username
+              }
+            }
+          }
+        `}
+        render={data => (
+          <>
+            <div className="Mobcard" key={data.strapiBlogs.id}>
+              <div className="articleboxcard">
+                <div className="cardimage">
+                  <img
+                    src={data.strapiBlogs.image.childImageSharp.fluid.src}
+                    alt="banner"
+                  />
+                </div>
+                <div className="cardinfo">
+                  <div className="card-start">
+                    <div className="card-genre">
+                      {data.strapiBlogs.categories.map(doc => (
+                        <button className="card-btn">{doc.name}</button>
+                      ))}
+                    </div>
+                    <div className="cardart-detail">
+                      <h1>{data.strapiBlogs.title}</h1>
+                      <p>{data.strapiBlogs.description}</p>
+                    </div>
+                  </div>
+                  <div className="iconcard-details">
+                    <div className="ui avatar image">
+                      <h1>JK</h1>
+                    </div>
+                    <div className="cardart-footer">
+                      <h1>By {data.strapiBlogs.author.username}</h1>
+                      <p>on {data.strapiBlogs.published_at}</p>
+                    </div>
+                  </div>
+                  <div className="article-bottom">
+                    <h1> Share : </h1>
+                    <div className="article-icons">
+                      <Link to="/page-2/">
+                        <i className="big facebook icon"></i>
+                      </Link>
+                      <Link to="/page-2/">
+                        <i className="big instagram icon"></i>
+                      </Link>
+                      <Link to="/page-2/">
+                        <i className="big twitter square icon"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="cardinfo">
-              <div className="card-start">
-                <div className="card-genre">
-                  <button className="card-btn">{doc.buttonname}</button>
-                  <button className="card-btn">{doc.btnname}</button>
-                </div>
-                <div className="cardart-detail">
-                  <h1>{doc.Title}</h1>
-                  <p>{doc.para}</p>
-                </div>
-              </div>
-              <div className="iconcard-details">
-                <div className="ui avatar image">
-                  <h1>KP</h1>
-                </div>
-                <div className="cardart-footer">
-                  <h1>By {doc.by}</h1>
-                  <p>on {doc.date}</p>
-                </div>
-              </div>
-              <div className="article-bottom">
-                <h1> Share : </h1>
-                <div className="article-icons">
-                  <Link to="/page-2/">
-                    <i className="big facebook icon"></i>
-                  </Link>
-                  <Link to="/page-2/">
-                    <i className="big instagram icon"></i>
-                  </Link>
-                  <Link to="/page-2/">
-                    <i className="big twitter square icon"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
+          </>
+        )}
+      />
     </>
   )
 }
@@ -138,7 +223,7 @@ const FirstArticle = () => {
           <h1>AD</h1>
         </div>
       </div>
-      <Firstarticle />
+      <FirstMobArticle />
       <div className="diviider"></div>
       <SecondPart />
       <div className="diviider"></div>

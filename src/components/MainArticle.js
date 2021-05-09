@@ -14,7 +14,7 @@ const Mob = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "100px" }}></div>
+      <div style={{ paddingTop: "80px" }}></div>
       <div className="article-padding">
         <Firstarticlen />
       </div>

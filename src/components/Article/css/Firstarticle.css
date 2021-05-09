@@ -258,6 +258,7 @@
   line-height: 28px;
   display: flex;
   align-items: center;
+  text-align: start;
   text-transform: capitalize;
   color: #000000;
 }
@@ -304,6 +305,21 @@
   width: 100%;
   padding: 5px;
   position: absolute;
+}
+
+.adtabbox{
+  width: 100%;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+.adtab {
+  width: 100%;
+  height: 300px;
+  background-color: #828282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .admobbox {
@@ -360,7 +376,7 @@
 }
 
 .articletab-container {
-  width: 85%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -425,8 +441,8 @@
 
 .artdesk-cardimage img {
   width: 98%;
-  height: auto;
-  /* object-fit: cover; */
+  height: 425px;
+  object-fit: cover;
   border-radius: 3px;
 }
 
@@ -508,7 +524,8 @@
 
 .images4 img {
   width: 100%;
-  height: auto;
+  height: 420px;
+  object-fit: cover;
 }
 
 .images5 {
