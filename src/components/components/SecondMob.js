@@ -16,16 +16,19 @@ const SecondMob = () => {
   const pageVisited = page * perPage
 
   const pageCalci = pageVisited + perPage
+  const indexOfLastPost = page * perPage
+  const indexOfFirstPost = indexOfLastPost - perPage
+  const currentPosts = CardDetail.slice(indexOfFirstPost, indexOfLastPost)
 
-  const Row = CardDetail.reverse()
-    .slice(pageVisited, pageCalci)
-    .map((doc, index) => {
-      return (
-        <div className="inherit-mobcard" key={index}>
-          {doc.body}
-        </div>
-      )
-    })
+  const paginate = pageNumber => setPage(pageNumber)
+
+  const Row = currentPosts.reverse().map((doc, index) => {
+    return (
+      <div className="inherit-mobcard" key={index}>
+        {doc.body}
+      </div>
+    )
+  })
 
   const NewMobbox = () => {
     return (
@@ -91,8 +94,8 @@ const SecondMob = () => {
                           <h1>
                             By{" "}
                             <h2>
-                              {data.strapiBlogs.author.firstname}{" "}
-                              {data.strapiBlogs.author.lastname}
+                              {doc.node.author.firstname}{" "}
+                              {doc.node.author.lastname}
                             </h2>
                           </h1>
                           <p>{doc.node.published_at.slice(0, 10)}</p>
@@ -144,9 +147,9 @@ const SecondMob = () => {
           <Cardbtn
             page={page}
             setPage={setPage}
-            prevClick={prevClick}
-            handleClick={handleClick}
-            activebtn={activebtn}
+            postsPerPage={perPage}
+            totalPosts={CardDetail.length}
+            paginate={paginate}
           />
         </div>
       </div>

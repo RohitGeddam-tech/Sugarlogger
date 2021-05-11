@@ -235,7 +235,7 @@ const FirstArticle = () => {
       <SecondPart />
       <div className="diviider"></div>
       <div className="commentmobbox">
-        <h1>add a comment</h1>
+        <h1>Add a Comment</h1>
         <Comments />
       </div>
       <div className="diviider"></div>

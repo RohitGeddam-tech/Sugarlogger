@@ -61,7 +61,7 @@ const Desk = () => {
     <>
       <Header />
       <SEO title="Home" />
-      <div style={{ paddingTop: "100px" }}></div>
+      <div style={{ paddingTop: "90px" }}></div>
       <div className="genres-bar">
         <GenresNav NavLinks={NavLinks} space="0.65" />
       </div>
@@ -119,12 +119,12 @@ const SecondBox = () => {
 
   const [isTab, setTab] = useState(
     typeof window !== "undefined"
-      ? window.matchMedia("(max-width:900px)").matches
+      ? window.matchMedia("(max-width:930px)").matches
       : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setTab(window.matchMedia("(max-width:900px)").matches)
+      setTab(window.matchMedia("(max-width:930px)").matches)
     })
   }, [isTab])
 

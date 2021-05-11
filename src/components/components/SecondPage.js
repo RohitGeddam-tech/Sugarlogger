@@ -1,71 +1,81 @@
 import * as React from "react"
 import { useState } from "react"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery, StaticQuery } from "gatsby"
 import "../css/SecondPage.css"
+import Host from "./Host"
 import { Search } from "semantic-ui-react"
 import Cardbox from "./CardBox"
 import Cardbtn from "../../utils/Cardbtn"
 import addUnderline from "../../utils/addUnderline"
 import remUnderline from "../../utils/remUnderline"
+import FirstDesk from "../Article/FirstDesk"
+import FirstPage from "./FirstPage"
+import PaginationComponent from "./PaginationComponent"
 // import CardDetail from "./CardDetail"
 
-const SecondPage = ({ data }) => {
-  const [page, setPage] = useState(0)
+const SecondPage = () => {
+  const [page, setPage] = useState(1)
   const perPage = 9
 
   const pageVisited = page * perPage
 
   const pageCalci = pageVisited + perPage
 
-  console.log("card no.", pageCalci)
+  // console.log("card no.", pageCalci)
 
-  const Row = Cardbox.reverse()
-    .slice(pageVisited, pageCalci)
-    .map((doc, index) => {
-      return (
-        <div className="inherit-boxcard" key={index}>
-          {doc.body}
-        </div>
-      )
-    })
+  const indexOfLastPost = page * perPage
+  const indexOfFirstPost = indexOfLastPost - perPage
+  const currentPosts = Cardbox.slice(indexOfFirstPost, indexOfLastPost)
+
+  const paginate = pageNumber => setPage(pageNumber)
+
+  const Row = currentPosts.reverse().map((doc, index) => {
+    return (
+      <div className="inherit-boxcard" key={index}>
+        {doc.body}
+      </div>
+    )
+  })
 
   const NewerRow = () => {
-    return (
-      <>
-        <StaticQuery
-          query={graphql`
-            query latestmobquery {
-              allStrapiBlogs {
-                edges {
-                  node {
-                    id
-                    title
-                    description
-                    image {
-                      childImageSharp {
-                        fluid {
-                          src
-                        }
-                      }
-                    }
-                    categories {
-                      name
-                    }
-                    author {
-                      firstname
-                      lastname
-                    }
-                    published_at
+    const [newArt, setNewArt] = useState("")
+    const data = useStaticQuery(graphql`
+      query latestmobquery {
+        allStrapiBlogs {
+          edges {
+            node {
+              id
+              title
+              description
+              image {
+                childImageSharp {
+                  fluid {
+                    src
                   }
                 }
               }
+              categories {
+                name
+              }
+              author {
+                firstname
+                lastname
+              }
+              published_at
+              strapiId
             }
-          `}
-          render={data =>
-            data.allStrapiBlogs.edges
-              .reverse()
-              .slice(pageVisited, pageCalci)
-              .map(doc => (
+          }
+        }
+      }
+    `)
+    return (
+      <>
+        {data.allStrapiBlogs.edges
+          // .reverse()
+          .slice(pageVisited, pageCalci)
+          .map((doc, index) => {
+            return (
+              <div className="inherit-boxcard" key={index}>
                 <Link to={`/article/`} className="boxcard" key={doc.node.id}>
                   <div className="cardimage">
                     <img
@@ -90,11 +100,11 @@ const SecondPage = ({ data }) => {
                         <h1>
                           By{" "}
                           <h2>
-                            {data.strapiBlogs.author.firstname}{" "}
-                            {data.strapiBlogs.author.lastname}
+                            {doc.node.author.firstname}{" "}
+                            {doc.node.author.lastname}
                           </h2>
                         </h1>
-                        <p>{doc.node.published_at}</p>
+                        <p>{doc.node.published_at.slice(0, 10)}</p>
                       </div>
                       <div className="card-right">
                         <Link to={`/article`}>
@@ -113,9 +123,9 @@ const SecondPage = ({ data }) => {
                     <div className="bottomgap"></div>
                   </div>
                 </Link>
-              ))
-          }
-        />
+              </div>
+            )
+          })}
       </>
     )
   }
@@ -138,41 +148,27 @@ const SecondPage = ({ data }) => {
     }
   }
 
-  console.log("card length", Cardbox.length)
+  // console.log("card length", Cardbox.length)
 
-  console.log(check())
+  // console.log(check())
 
   return (
     <>
       <div className="second-container">
-        {/* <StaticQuery
-          query={graphql`
-            query newquery {
-              strapiBlogs {
-                id
-                title
-                description
-              }
-            }
-          `}
-          render={data => (
-            <>
-            <h1>{data.strapiBlogs.title}</h1>
-            <p>{data.strapiBlogs.description}</p>
-            </>
-          )}
-        /> */}
         <div className="searchbox">
           <Search placeholder="Search" />
         </div>
         <div className="cardBox">
-          <div className="allCards">{Row}</div>
+          <div className="allCards">
+            {Row}
+            {/* <NewerRow /> */}
+          </div>
           <Cardbtn
             page={page}
             setPage={setPage}
-            prevClick={prevClick}
-            handleClick={handleClick}
-            activebtn={activebtn}
+            postsPerPage={perPage}
+            totalPosts={Cardbox.length}
+            paginate={paginate}
           />
         </div>
       </div>

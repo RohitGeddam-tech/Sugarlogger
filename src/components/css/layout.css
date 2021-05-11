@@ -56,3 +56,107 @@ button:focus {
   width: 1400px;
   margin: auto;
 }
+
+.prevArrow {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.nextArrow {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.chevron.left.icon{
+  margin: 0 !important;
+}
+
+.chevron.right.icon{
+  margin: 0 !important;
+}
+
+.disabled{
+  border: none;
+  background-color: transparent;
+}
+
+.card-paginate {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0 !important;
+}
+
+.page-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+}
+
+.page-link{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #55575c;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.active-page{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 0;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.nav ul{
+  margin-bottom: 0 !important;
+}

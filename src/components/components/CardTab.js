@@ -135,6 +135,39 @@ const Cardbox = [
   {
     body: <TabCard />,
   },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
+  {
+    body: <TabCard />,
+  },
 ]
 
 export default Cardbox

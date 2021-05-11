@@ -60,7 +60,7 @@ const Pro = () => {
     <>
       <HeaderMob />
       <SEO title="Home" />
-      <div style={{ paddingTop: "80px" }}>
+      <div style={{ paddingTop: "90px" }}>
         <FirstPage />
         <div className="genres-bar">
           <GenresNav NavLinks={NavLinks} space="0.57" bottom='68%' />
@@ -115,12 +115,12 @@ const Mob = () => {
 const Home = () => {
   const [isTab, setTab] = useState(
     typeof window !== "undefined"
-      ? window.matchMedia("(max-width:900px)").matches
+      ? window.matchMedia("(max-width:930px)").matches
       : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setTab(window.matchMedia("(max-width:900px)").matches)
+      setTab(window.matchMedia("(max-width:930px)").matches)
     })
   }, [isTab])
 

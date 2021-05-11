@@ -152,8 +152,8 @@ const FirstDesk = () => {
               render={data => (
                 <>
                   <div className="artdeskcard" key={data.strapiBlogs.id}>
-                    <div className="artdeskboxcard">
-                      <div className="artdesk-cardimage">
+                    <div className="arttabboxcard">
+                      <div className="artdesk-cardtabimage">
                         <img
                           src={data.strapiBlogs.image.childImageSharp.fluid.src}
                           alt="banner"
@@ -208,8 +208,8 @@ const FirstDesk = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="diviider"></div>
-                  <div className="article-container">
+                  <div className="diviiider"></div>
+                  <div className="article-tabcontainer">
                     <div className="second-part">
                       {data.strapiBlogs.content.map(doc => (
                         <ol>
@@ -345,17 +345,17 @@ const FirstDesk = () => {
                 </>
               )}
             />
-            <div className="diviider"></div>
-            <div className="commentbox">
-              <h1>add a comment</h1>
+            <div className="diviiider"></div>
+            <div className="commenttabbox">
+              <h1>Add a Comment</h1>
               <Comments />
             </div>
-            <div className="diviider"></div>
-            <div className="commentbox">
+            <div className="diviiider"></div>
+            <div className="commenttabbox">
               <h1>View comments</h1>
               <ViewComments />
             </div>
-            <div className="diviider"></div>
+            <div className="diviiider"></div>
             <Related Relatedbox={Relatedbox} />
           </div>
         </div>

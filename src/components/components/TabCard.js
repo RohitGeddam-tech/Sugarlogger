@@ -59,7 +59,11 @@ const TabCard = () => {
                 <div className="card-footer">
                   <div className="card-left">
                     <h1>
-                      By <h2>{data.strapiBlogs.author.firstname}. {data.strapiBlogs.author.lastname}</h2>
+                      By{" "}
+                      <h2>
+                        {data.strapiBlogs.author.firstname}{" "}
+                        {data.strapiBlogs.author.lastname}
+                      </h2>
                     </h1>
                     <p>{data.strapiBlogs.published_at.slice(0, 10)}</p>
                   </div>

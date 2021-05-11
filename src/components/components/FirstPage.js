@@ -54,13 +54,11 @@ const FirstPage = () => {
                       <div className="banner-title">
                         <h1>{data.strapiBlogs.tag.name}</h1>
                       </div>
-                      <div className="diviider"></div>
+                      <div className="diviiider"></div>
                       <div className="Genres">
                         {data.strapiBlogs.categories.map(doc => (
                           <button className="bannerbtn">{doc.name}</button>
                         ))}
-                        {/* <button className="bannerbtn">Diet Food</button>
-                        <button className="bannerbtn">Fitness</button> */}
                       </div>
                       <div className="banner-data">
                         <h1>{data.strapiBlogs.title}</h1>
@@ -70,7 +68,7 @@ const FirstPage = () => {
                     <div className="banner-footer">
                       <div className="right">
                         <div className="colorOrange">
-                          <h2>By</h2>
+                          <h2>By{' '}</h2>
                           <h1>
                             {data.strapiBlogs.author.firstname}{" "}
                             {data.strapiBlogs.author.lastname}

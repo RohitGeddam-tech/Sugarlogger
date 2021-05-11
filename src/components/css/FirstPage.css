@@ -92,7 +92,7 @@
 
 .bannerbtn {
   width: auto;
-  padding: 2px 15px !important;
+  padding: 3px 15px !important;
   padding-bottom: 1px !important;
   border: 0.6px solid #d44638;
   border-radius: 3px;
@@ -103,6 +103,8 @@
   line-height: 15px;
   margin-left: 10px;
   margin-top: 5px;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
@@ -131,7 +133,8 @@
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 10px !important;
-  padding: 0 0 0 0;
+  padding: 0;
+  padding-top: 5px;
   color: #282c36;
 }
 
@@ -141,6 +144,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 5px;
   text-transform: capitalize;
   color: #828282;
 }
@@ -197,6 +201,7 @@
 
 .left {
   display: flex;
+  align-items: flex-end;
 }
 
 .left h1 {
@@ -329,6 +334,7 @@
   display: block;
   width: fit-content !important;
   cursor: pointer;
+  padding-right: 12px;
   background-color: white;
 }
 
@@ -464,7 +470,7 @@
 }
 
 .home-container {
-  width: 95%;
+  width: 94%;
   display: flex;
   flex-flow: column;
   margin: auto;
@@ -523,7 +529,7 @@
 }
 
 .banner-mobimg img {
-  width: 100%;
+  width: 98%;
 }
 
 .banner-mobfooter {

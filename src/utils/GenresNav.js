@@ -12,7 +12,7 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
     if (locref.current.getBoundingClientRect() || null) {
       const rect = locref.current.getBoundingClientRect()
       const leftPos = rect.left - locref.current.offsetWidth * 0
-      console.log(leftPos)
+      // console.log(leftPos)
       return leftPos
     } else {
       return null

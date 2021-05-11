@@ -7,48 +7,76 @@ const NewRow = () => {
   return (
     <>
       <StaticQuery
+        // query={graphql`
+        //   query rowquery {
+        //     strapiBlogs {
+        //       id
+        //       title
+        //       description
+        //       image {
+        //         childImageSharp {
+        //           fluid {
+        //             src
+        //           }
+        //         }
+        //       }
+        //       categories {
+        //         name
+        //       }
+        //       author {
+        //         firstname
+        //         lastname
+        //       }
+        //       published_at
+        //     }
+        //   }
+        // `}
         query={graphql`
           query rowquery {
-            strapiBlogs {
-              id
-              title
-              description
-              image {
-                childImageSharp {
-                  fluid {
-                    src
+            allStrapiBlogs {
+              edges {
+                node {
+                  id
+                  title
+                  description
+                  image {
+                    childImageSharp {
+                      fluid {
+                        src
+                      }
+                    }
                   }
+                  categories {
+                    name
+                  }
+                  author {
+                    firstname
+                    lastname
+                  }
+                  published_at
                 }
               }
-              categories {
-                name
-              }
-              author {
-                firstname
-                lastname
-              }
-              published_at
             }
           }
         `}
         render={data => (
-          <Link to={`/article/`} className="boxcard" key={data.strapiBlogs.id}>
+          <Link to={`/article/`} className="boxcard" key={data.allStrapiBlogs.edges[0].node.id}>
             <div className="cardimage">
               <img
-                src={data.strapiBlogs.image.childImageSharp.fluid.src}
+                src={data.allStrapiBlogs.edges[0].node.image.childImageSharp.fluid.src}
                 alt="banner"
               />
             </div>
             <div className="cardinfo">
               <div className="card-start">
                 <div className="card-genre">
-                  {data.strapiBlogs.categories.map(document => (
+                  {data.allStrapiBlogs.edges[0].node.categories.map(document => (
                     <button className="card-btn">{document.name}</button>
                   ))}
                 </div>
                 <div className="card-detail">
-                  <h1>{data.strapiBlogs.title}</h1>
-                  <p>{data.strapiBlogs.description}</p>
+                  <h1>{data.allStrapiBlogs.edges[0].node.title}</h1>
+                  <p>{data.allStrapiBlogs.edges[0].node.description}</p>
                 </div>
               </div>
               <div className="card-footer">
@@ -56,11 +84,11 @@ const NewRow = () => {
                   <h1>
                     By{" "}
                     <h2>
-                      {data.strapiBlogs.author.firstname}{" "}
-                      {data.strapiBlogs.author.lastname}
+                      {data.allStrapiBlogs.edges[0].node.author.firstname}{" "}
+                      {data.allStrapiBlogs.edges[0].node.author.lastname}
                     </h2>
                   </h1>
-                  <p>{data.strapiBlogs.published_at.slice(0, 10)}</p>
+                  <p>{data.allStrapiBlogs.edges[0].node.published_at.slice(0, 10)}</p>
                 </div>
                 <div className="card-right">
                   <Link to="/article">

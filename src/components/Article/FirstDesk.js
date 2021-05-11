@@ -22,16 +22,27 @@ const FirstDesk = () => {
             <StaticQuery
               query={graphql`
                 query newarticlequery {
-                  strapiBlogs {
-                    id
-                    title
-                    description
-                    content {
-                      content
-                      heading
-                      id
-                      images {
-                        info
+                  allStrapiBlogs {
+                    edges {
+                      node {
+                        id
+                        title
+                        description
+                        content {
+                          content
+                          heading
+                          id
+                          images {
+                            image {
+                              childImageSharp {
+                                fluid {
+                                  src
+                                }
+                              }
+                            }
+                            info
+                          }
+                        }
                         image {
                           childImageSharp {
                             fluid {
@@ -39,36 +50,26 @@ const FirstDesk = () => {
                             }
                           }
                         }
-                      }
-                    }
-                    tag {
-                      name
-                    }
-                    image {
-                      childImageSharp {
-                        fluid {
-                          src
+                        categories {
+                          name
                         }
+                        author {
+                          firstname
+                          lastname
+                        }
+                        published_at
                       }
-                    }
-                    categories {
-                      name
-                    }
-                    published_at
-                    author {
-                      firstname
-                      lastname
                     }
                   }
-                }
+                }  
               `}
               render={data => (
                 <>
-                  <div className="artdeskcard" key={data.strapiBlogs.id}>
+                  <div className="artdeskcard" key={data.allStrapiBlogs.edges[0].node.id}>
                     <div className="artdeskboxcard">
                       <div className="artdesk-cardimage">
                         <img
-                          src={data.strapiBlogs.image.childImageSharp.fluid.src}
+                          src={data.allStrapiBlogs.edges[0].node.image.childImageSharp.fluid.src}
                           alt="banner"
                         />
                       </div>
@@ -78,13 +79,13 @@ const FirstDesk = () => {
                           style={{ paddingTop: "10px" }}
                         >
                           <div className="card-genre">
-                            {data.strapiBlogs.categories.map(doc => (
+                            {data.allStrapiBlogs.edges[0].node.categories.map(doc => (
                               <button className="card-btn">{doc.name}</button>
                             ))}
                           </div>
                           <div className="cardartdesk-detail">
-                            <h1>{data.strapiBlogs.title}</h1>
-                            <p>{data.strapiBlogs.description}</p>
+                            <h1>{data.allStrapiBlogs.edges[0].node.title}</h1>
+                            <p>{data.allStrapiBlogs.edges[0].node.description}</p>
                           </div>
                         </div>
                         <div className="iconcard-details">
@@ -95,12 +96,12 @@ const FirstDesk = () => {
                             <div className="card-color">
                               <h2>By</h2>
                               <h1>
-                                {data.strapiBlogs.author.firstname}{" "}
-                                {data.strapiBlogs.author.lastname}
+                                {data.allStrapiBlogs.edges[0].node.author.firstname}{" "}
+                                {data.allStrapiBlogs.edges[0].node.author.lastname}
                               </h1>
                             </div>
                             <p>
-                              on {data.strapiBlogs.published_at.slice(0, 10)}
+                              on {data.allStrapiBlogs.edges[0].node.published_at.slice(0, 10)}
                             </p>
                           </div>
                         </div>
@@ -124,7 +125,7 @@ const FirstDesk = () => {
                   <div className="diviider"></div>
                   <div className="article-container">
                     <div className="second-part">
-                      {data.strapiBlogs.content.map(doc => (
+                      {data.allStrapiBlogs.edges[0].node.content.map(doc => (
                         <ol>
                           <li>
                             <h1>
@@ -260,7 +261,7 @@ const FirstDesk = () => {
             />
             <div className="diviider"></div>
             <div className="commentbox">
-              <h1>add a comment</h1>
+              <h1>Add a Comment</h1>
               <Comments />
             </div>
             <div className="diviider"></div>
