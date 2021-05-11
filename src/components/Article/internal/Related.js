@@ -61,12 +61,9 @@ import remUnderline from "../../../utils/remUnderline"
 //   )
 // }
 
-const RelatedNew = () => {
+const RelatedNew = ({classname}) => {
   return (
     <>
-      <div className="related-heading">
-        <h1>Related Articles</h1>
-      </div>
       <StaticQuery
         query={graphql`
           query articlequery {
@@ -96,26 +93,25 @@ const RelatedNew = () => {
             }
           }
         `}
-        render={data =>
-          data.allStrapiBlogs.edges.slice(0, 3).map(doc => (
-            <div className="artdeskcard" key={doc.node.id}>
-              <div className="artrelboxcard">
-                <div className="artdesk-cardimage">
+        render={data =>(
+            <div className="artdeskcard" key={data.allStrapiBlogs.edges[0].node.id}>
+              <div className={classname}>
+                <div className="artdesk-cardImage">
                   <img
-                    src={doc.node.image.childImageSharp.fluid.src}
+                    src={data.allStrapiBlogs.edges[0].node.image.childImageSharp.fluid.src}
                     alt="banner"
                   />
                 </div>
                 <div className="cardinfo">
                   <div className="card-start" style={{ paddingTop: "10px" }}>
                     <div className="card-genre">
-                      {doc.node.categories.map(document => (
+                      {data.allStrapiBlogs.edges[0].node.categories.map(document => (
                         <button className="card-btn">{document.name}</button>
                       ))}
                     </div>
                     <div className="cardartdesk-detail">
-                      <h1>{doc.node.title}</h1>
-                      <p>{doc.node.description}</p>
+                      <h1>{data.allStrapiBlogs.edges[0].node.title}</h1>
+                      <p>{data.allStrapiBlogs.edges[0].node.description}</p>
                     </div>
                   </div>
                   <div className="iconcard-details">
@@ -128,12 +124,12 @@ const RelatedNew = () => {
                           <div className="card-color">
                             <h2>By</h2>
                             <h1>
-                              {doc.node.author.firstname}{" "}
-                              {doc.node.author.lastname}
+                              {data.allStrapiBlogs.edges[0].node.author.firstname}{" "}
+                              {data.allStrapiBlogs.edges[0].node.author.lastname}
                             </h1>
                           </div>
                         </div>
-                        <p>{doc.node.published_at.slice(0, 10)}</p>
+                        <p>{data.allStrapiBlogs.edges[0].node.published_at.slice(0, 10)}</p>
                       </div>
                       <div className="left">
                         <Link to="/article/">
@@ -153,7 +149,7 @@ const RelatedNew = () => {
                 </div>
               </div>
             </div>
-          ))
+          )
         }
       />
     </>

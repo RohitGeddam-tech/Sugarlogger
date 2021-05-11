@@ -41,7 +41,7 @@ const Pro = () => {
       <HeaderMob />
       <SEO title="Home" />
       <div style={{ paddingTop: "80px" }}></div>
-      <FirstDesk />
+      <FirstDesk jk={6500} />
       <FooterTab />
     </>
   )
@@ -53,7 +53,7 @@ const Desk = () => {
       <Header />
       <SEO title="Home" />
       <div style={{ paddingTop: "80px" }}></div>
-      <FirstDesk />
+      <FirstDesk jk={6050} />
       <Footer />
     </>
   )

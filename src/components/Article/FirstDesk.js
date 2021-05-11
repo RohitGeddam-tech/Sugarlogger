@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useRef, useCallback } from "react"
 import "./css/Firstarticle.css"
 import FirstDeskpart from "./internal/FirstDeskpart"
 import SecondPart from "./internal/SecondPart"
@@ -13,7 +13,30 @@ import mint3 from "../../images/Mint4.png"
 import sleep from "../../images/Sleep.png"
 import { StaticQuery, graphql, Link } from "gatsby"
 
-const FirstDesk = () => {
+const FirstDesk = ({ jk }) => {
+  const locref = useRef(null)
+
+  const isInView = () => {
+    const rect = window.pageYOffset
+    return rect <= jk
+  }
+
+  const [inView, setInView] = useState(false)
+
+  const scrollHandler = useCallback(() => {
+    setInView(isInView())
+  }, [])
+
+  useEffect(() => {
+    setInView(isInView())
+    window.addEventListener("scroll", scrollHandler)
+    return () => {
+      window.removeEventListener("scroll", scrollHandler)
+    }
+  }, [scrollHandler])
+
+  const adPos = inView ? "adbox" : "noad"
+
   return (
     <>
       <div className="article-desk">
@@ -61,15 +84,21 @@ const FirstDesk = () => {
                       }
                     }
                   }
-                }  
+                }
               `}
               render={data => (
                 <>
-                  <div className="artdeskcard" key={data.allStrapiBlogs.edges[0].node.id}>
+                  <div
+                    className="artdeskcard"
+                    key={data.allStrapiBlogs.edges[0].node.id}
+                  >
                     <div className="artdeskboxcard">
                       <div className="artdesk-cardimage">
                         <img
-                          src={data.allStrapiBlogs.edges[0].node.image.childImageSharp.fluid.src}
+                          src={
+                            data.allStrapiBlogs.edges[0].node.image
+                              .childImageSharp.fluid.src
+                          }
                           alt="banner"
                         />
                       </div>
@@ -79,13 +108,17 @@ const FirstDesk = () => {
                           style={{ paddingTop: "10px" }}
                         >
                           <div className="card-genre">
-                            {data.allStrapiBlogs.edges[0].node.categories.map(doc => (
-                              <button className="card-btn">{doc.name}</button>
-                            ))}
+                            {data.allStrapiBlogs.edges[0].node.categories.map(
+                              doc => (
+                                <button className="card-btn">{doc.name}</button>
+                              )
+                            )}
                           </div>
                           <div className="cardartdesk-detail">
                             <h1>{data.allStrapiBlogs.edges[0].node.title}</h1>
-                            <p>{data.allStrapiBlogs.edges[0].node.description}</p>
+                            <p>
+                              {data.allStrapiBlogs.edges[0].node.description}
+                            </p>
                           </div>
                         </div>
                         <div className="iconcard-details">
@@ -96,12 +129,22 @@ const FirstDesk = () => {
                             <div className="card-color">
                               <h2>By</h2>
                               <h1>
-                                {data.allStrapiBlogs.edges[0].node.author.firstname}{" "}
-                                {data.allStrapiBlogs.edges[0].node.author.lastname}
+                                {
+                                  data.allStrapiBlogs.edges[0].node.author
+                                    .firstname
+                                }{" "}
+                                {
+                                  data.allStrapiBlogs.edges[0].node.author
+                                    .lastname
+                                }
                               </h1>
                             </div>
                             <p>
-                              on {data.allStrapiBlogs.edges[0].node.published_at.slice(0, 10)}
+                              on{" "}
+                              {data.allStrapiBlogs.edges[0].node.published_at.slice(
+                                0,
+                                10
+                              )}
                             </p>
                           </div>
                         </div>
@@ -270,10 +313,15 @@ const FirstDesk = () => {
               <ViewComments />
             </div>
             <div className="diviider"></div>
-            <Related />
+            <div className="related-heading">
+              <h1>Related Articles</h1>
+            </div>
+            <Related classname="artrelboxcard" />
+            <Related classname="artrelboxcard" />
+            <Related classname="artrelboxcard" />
           </div>
-          <div className="article-right">
-            <div className="adbox">
+          <div className="article-right" ref={locref}>
+            <div className={adPos}>
               <div className="ad">
                 <h1>AD</h1>
               </div>

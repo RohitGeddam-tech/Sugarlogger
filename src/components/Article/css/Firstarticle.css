@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.arttabboxcard{
+.arttabboxcard {
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -210,7 +210,7 @@
   padding-bottom: 20px;
 }
 
-.article-tabcontainer{
+.article-tabcontainer {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -328,9 +328,15 @@
 }
 
 .adbox {
+  width: 30%;
+  padding: 5px;
+  position: fixed;
+}
+
+.noad {
   width: 100%;
   padding: 5px;
-  position: absolute;
+  position: relative;
 }
 
 .adtabbox {
@@ -459,19 +465,50 @@
   background-color: #eeeeee;
 }
 
+.artreltabbox{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 10px !important;
+}
+
+/* .artreltabbox:hover {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: #eeeeee;
+} */
+
 .artdesk-cardimage {
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.artdesk-cardtabimage{
+.artdesk-cardImage{
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.artdesk-cardtabimage img{
+.artdesk-cardImage img {
+  width: 100%;
+  height: 425px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.artdesk-cardtabimage {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.artdesk-cardtabimage img {
   width: 100%;
   height: 425px;
   object-fit: cover;
@@ -605,7 +642,7 @@
   padding-bottom: 20px !important;
 }
 
-.commenttabbox{
+.commenttabbox {
   width: 100%;
   display: flex;
   flex-flow: column;

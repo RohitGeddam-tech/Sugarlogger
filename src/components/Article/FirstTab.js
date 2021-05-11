@@ -356,7 +356,9 @@ const FirstDesk = () => {
               <ViewComments />
             </div>
             <div className="diviiider"></div>
-            <Related Relatedbox={Relatedbox} />
+            <Related Relatedbox={Relatedbox} classname='artreltabbox' />
+            <Related classname='artreltabbox' />
+            <Related classname='artreltabbox' />
           </div>
         </div>
       </div>

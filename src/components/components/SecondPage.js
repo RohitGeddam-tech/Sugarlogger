@@ -68,11 +68,13 @@ const SecondPage = () => {
         }
       }
     `)
+
+    // const indexNum = data.allStrapiBlogs.edges[index].id
     return (
       <>
         {data.allStrapiBlogs.edges
-          // .reverse()
-          .slice(pageVisited, pageCalci)
+          .reverse()
+          .slice(indexOfFirstPost, indexOfLastPost)
           .map((doc, index) => {
             return (
               <div className="inherit-boxcard" key={index}>
@@ -160,8 +162,8 @@ const SecondPage = () => {
         </div>
         <div className="cardBox">
           <div className="allCards">
-            {Row}
-            {/* <NewerRow /> */}
+            {/* {Row} */}
+            <NewerRow />
           </div>
           <Cardbtn
             page={page}
