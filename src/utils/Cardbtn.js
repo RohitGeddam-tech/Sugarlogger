@@ -6,7 +6,7 @@ const Cardbtn = ({ postsPerPage, totalPosts, paginate, page, setPage }) => {
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i)
   }
-  console.log(pageNumbers)
+  console.log(page)
 
   const [perNumber, setPerNumber] = useState(1)
   const perRender = 4
@@ -61,6 +61,7 @@ const Cardbtn = ({ postsPerPage, totalPosts, paginate, page, setPage }) => {
         </>
       )
     } else {
+      console.log(page)
       return (
         <>
           {pageNumbers.slice(3, 8).map(number => {

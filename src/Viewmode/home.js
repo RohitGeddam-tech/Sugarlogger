@@ -148,12 +148,12 @@ const Home = () => {
 
   const [isMob, setMob] = useState(
     typeof window !== "undefined"
-      ? window.matchMedia("(max-width:700px)").matches
+      ? window.matchMedia("(max-width:650px)").matches
       : null
   )
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setMob(window.matchMedia("(max-width:700px)").matches)
+      setMob(window.matchMedia("(max-width:650px)").matches)
     })
   }, [isMob])
 

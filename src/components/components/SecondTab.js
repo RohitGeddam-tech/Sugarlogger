@@ -9,7 +9,7 @@ import FirstTab from "../Article/FirstTab"
 import Host from "./Host"
 
 const SecondPage = () => {
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState(1)
   const perPage = 8
 
   const pageVisited = page * perPage
