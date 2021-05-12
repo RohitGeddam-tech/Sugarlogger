@@ -162,8 +162,8 @@ const SecondPage = () => {
         </div>
         <div className="cardBox">
           <div className="allCards">
-            {/* {Row} */}
-            <NewerRow />
+            {Row}
+            {/* <NewerRow /> */}
           </div>
           <Cardbtn
             page={page}

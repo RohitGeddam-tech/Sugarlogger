@@ -45,7 +45,7 @@ const Cardbtn = ({ postsPerPage, totalPosts, paginate, page, setPage }) => {
   }
 
   const PageRender = () => {
-    if (page === 1 || page === 2 || page === 3 || page === 4) {
+    if (page === 0 || page === 1 || page === 2 || page === 3 || page === 4) {
       return (
         <>
           {pageNumbers.slice(0, 4).map(number => {
