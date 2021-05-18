@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql, useStaticQuery } from "gatsby"
 import "../css/SecondPage.css"
 import { Search } from "semantic-ui-react"
 import CardDetail from "./CardDetail"
@@ -31,95 +31,88 @@ const SecondMob = () => {
   })
 
   const NewMobbox = () => {
-    return (
-      <>
-        <StaticQuery
-          query={graphql`
-            query latestquery {
-              allStrapiBlogs {
-                edges {
-                  node {
-                    id
-                    title
-                    description
-                    image {
-                      childImageSharp {
-                        fluid {
-                          src
-                        }
-                      }
-                    }
-                    categories {
-                      name
-                    }
-                    author {
-                      firstname
-                      lastname
-                    }
-                    published_at
+    const data = useStaticQuery(graphql`
+      query latestquery {
+        allStrapiBlogs {
+          edges {
+            node {
+              id
+              title
+              description
+              image {
+                childImageSharp {
+                  fluid {
+                    src
                   }
                 }
               }
+              categories {
+                name
+              }
+              author {
+                firstname
+                lastname
+              }
+              published_at
             }
-          `}
-          render={data =>
-            data.allStrapiBlogs.edges
-              .reverse()
-              .slice(pageVisited, pageCalci)
-              .map(doc => (
-                <Link to="/article/" className="Mobobcard" key={doc.node.id}>
-                  <div className="Mobboxcard">
-                    <div className="cardimage">
-                      <img
-                        src={doc.node.image.childImageSharp.fluid.src}
-                        alt="banner"
-                      />
+          }
+        }
+      }
+    `)
+    return (
+      <>
+        {data.allStrapiBlogs.edges
+          .reverse()
+          .slice(pageVisited, pageCalci)
+          .map(doc => (
+            <Link to="/article/" className="Mobobcard" key={doc.node.id}>
+              <div className="Mobboxcard">
+                <div className="cardimage">
+                  <img
+                    src={doc.node.image.childImageSharp.fluid.src}
+                    alt="banner"
+                  />
+                </div>
+                <div className="cardinfo">
+                  <div className="card-start">
+                    <div className="card-genre">
+                      {doc.node.categories.map(document => (
+                        <button className="card-btn">{document.name}</button>
+                      ))}
                     </div>
-                    <div className="cardinfo">
-                      <div className="card-start">
-                        <div className="card-genre">
-                          {doc.node.categories.map(document => (
-                            <button className="card-btn">
-                              {document.name}
-                            </button>
-                          ))}
-                        </div>
-                        <div className="card-detail">
-                          <h1>{doc.node.title}</h1>
-                          <p>{doc.node.description}</p>
-                        </div>
-                      </div>
-                      <div className="card-footer">
-                        <div className="card-left">
-                          <h1>
-                            By{" "}
-                            <h2>
-                              {doc.node.author.firstname}{" "}
-                              {doc.node.author.lastname}
-                            </h2>
-                          </h1>
-                          <p>{doc.node.published_at.slice(0, 10)}</p>
-                        </div>
-                        <div className="card-right">
-                          <Link to="/article/">
-                            <h1
-                              onMouseEnter={addUnderline}
-                              onMouseLeave={remUnderline}
-                            >
-                              READ MORE
-                            </h1>
-                          </Link>
-                          <Link to="/article/">
-                            <i className="large arrow right icon"></i>
-                          </Link>
-                        </div>
-                      </div>
+                    <div className="card-detail">
+                      <h1>{doc.node.title}</h1>
+                      <p>{doc.node.description}</p>
                     </div>
                   </div>
-                </Link>
-              ))
-          }
-        />
+                  <div className="card-footer">
+                    <div className="card-left">
+                      <h1>
+                        By{" "}
+                        <h2>
+                          {doc.node.author.firstname} {doc.node.author.lastname}
+                        </h2>
+                      </h1>
+                      <p>{doc.node.published_at.slice(0, 10)}</p>
+                    </div>
+                    <div className="card-right">
+                      <Link to="/article/">
+                        <h1
+                          onMouseEnter={addUnderline}
+                          onMouseLeave={remUnderline}
+                        >
+                          READ MORE
+                        </h1>
+                      </Link>
+                      <Link to="/article/">
+                        <i className="large arrow right icon"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
       </>
     )
   }

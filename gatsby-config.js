@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Sugarlogger`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Alchemist`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,12 @@ module.exports = {
         queryLimit: 10000,
       },
     },
+    // {
+    //   resolve: "gatsby-transformer-remark",
+    //   options: {
+    //     plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+    //   }
+    // }
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

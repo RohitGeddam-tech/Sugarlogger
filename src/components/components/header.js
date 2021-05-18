@@ -4,13 +4,13 @@ import logo from "../../images/SugarloggerLogo.svg"
 import "../css/header.css"
 import NavLinks from "./NavBarLinks"
 
-const Header = () => (
+const Header = ({clicked, setClicked}) => (
   <header>
     <nav className="header-nav">
-      <div className="logo">
-        <Link to="/">
+      <div className="logo" onClick={()=>setClicked(false)}>
+        {/* <Link to="/" onClick={()=>setClicked(false)}> */}
           <img src={logo} alt="logo " />
-        </Link>
+        {/* </Link> */}
       </div>
       <div className="nav-links">
         {/* {NavLinks.map(document => (
@@ -25,7 +25,7 @@ const Header = () => (
         <Link className="link-name">For Path Labs</Link>
         <Link className="link-name">For Patients</Link>
         <Link className="link-name">For Doctors</Link>
-        <Link className="link-active">Blogs</Link>
+        <Link to="/" className="link-active">Blogs</Link>
         <Link className="link-name">About Us</Link>
         <Link className="link-name">Contact Us</Link>
         <Link to="/">

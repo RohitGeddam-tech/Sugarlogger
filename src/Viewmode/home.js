@@ -6,11 +6,13 @@ import FooterMob from "../components/components/FooterMob"
 import FooterTab from "../components/components/FooterTab"
 import SEO from "../components/seo"
 import FirstPage from "../components/components/FirstPage"
+import Trial from "../components/components/Trial"
 import SecondPage from "../components/components/SecondPage"
 import SecondMob from "../components/components/SecondMob"
 import SecondTab from "../components/components/SecondTab"
 import FirstMob from "../components/components/FirstPageMob"
 import GenresNav from "../utils/GenresNav"
+import GenresStrapi from "../utils/GenresStrapi"
 import NavLinks from "../components/components/NavLinks"
 
 const Large = () => {
@@ -39,16 +41,20 @@ const Large = () => {
 }
 
 const Desk = () => {
+  const [clicked, setClicked] = useState(false)
   return (
     <>
-      <Header />
+      <Header clicked={clicked} setClicked={setClicked} />
       <SEO title="Home" />
       <div style={{ paddingTop: "80px" }}>
-        <FirstPage />
+        {clicked ? <div style={{display:'none'}}>Rohit Geddam</div>
+        : <><FirstPage />
+        {/* <Trial /> */}
         <div className="genres-bar">
           <GenresNav NavLinks={NavLinks} space="0.65" bottom='24%'/>
-        </div>
-        <SecondPage />
+          {/* <GenresStrapi NavLinks={NavLinks} space="0.65" bottom='24%'/> */}
+        </div></>}
+        <SecondPage clicked={clicked} setClicked={setClicked} />
       </div>
       <Footer />
     </>

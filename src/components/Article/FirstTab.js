@@ -11,7 +11,7 @@ import mint1 from "../../images/Mint1.png"
 import mint2 from "../../images/Mint2.png"
 import mint3 from "../../images/Mint4.png"
 import sleep from "../../images/Sleep.png"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql, useStaticQuery } from "gatsby"
 
 const Secondarray = [
   {
@@ -96,6 +96,48 @@ const Relatedbox = [
 ]
 
 const FirstDesk = () => {
+  const data = useStaticQuery(graphql`
+    query newtabarticlequery {
+      strapiBlogs {
+        id
+        title
+        description
+        content {
+          content
+          heading
+          id
+          images {
+            info
+            image {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+        }
+        tag {
+          name
+        }
+        image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
+        categories {
+          name
+        }
+        published_at
+        author {
+          firstname
+          lastname
+        }
+      }
+    }
+  `)
   return (
     <>
       <div className="article-desk">
@@ -106,245 +148,192 @@ const FirstDesk = () => {
             </div>
           </div>
           <div className="articleB">
-            <StaticQuery
-              query={graphql`
-                query newtabarticlequery {
-                  strapiBlogs {
-                    id
-                    title
-                    description
-                    content {
-                      content
-                      heading
-                      id
-                      images {
-                        info
-                        image {
-                          childImageSharp {
-                            fluid {
-                              src
-                            }
-                          }
-                        }
-                      }
-                    }
-                    tag {
-                      name
-                    }
-                    image {
-                      childImageSharp {
-                        fluid {
-                          src
-                        }
-                      }
-                    }
-                    categories {
-                      name
-                    }
-                    published_at
-                    author {
-                      firstname
-                      lastname
-                    }
-                  }
-                }
-              `}
-              render={data => (
-                <>
-                  <div className="artdeskcard" key={data.strapiBlogs.id}>
-                    <div className="arttabboxcard">
-                      <div className="artdesk-cardtabimage">
-                        <img
-                          src={data.strapiBlogs.image.childImageSharp.fluid.src}
-                          alt="banner"
-                        />
-                      </div>
-                      <div className="cardinfo">
-                        <div
-                          className="card-start"
-                          style={{ paddingTop: "10px" }}
-                        >
-                          <div className="card-genre">
-                            {data.strapiBlogs.categories.map(doc => (
-                              <button className="card-btn">{doc.name}</button>
-                            ))}
-                          </div>
-                          <div className="cardartdesk-detail">
-                            <h1>{data.strapiBlogs.title}</h1>
-                            <p>{data.strapiBlogs.description}</p>
-                          </div>
-                        </div>
-                        <div className="iconcard-details">
-                          <div className="ui avatar image">
-                            <h1>JK</h1>
-                          </div>
-                          <div className="cardart-footer">
-                            <div className="card-color">
-                              <h2>By</h2>
-                              <h1>
-                                {data.strapiBlogs.author.firstname}{" "}
-                                {data.strapiBlogs.author.lastname}
-                              </h1>
-                            </div>
-                            <p>
-                              on {data.strapiBlogs.published_at.slice(0, 10)}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="articledesk-bottom">
-                          <h1> Share : </h1>
-                          <div className="article-icons">
-                            <Link to="/page-2/">
-                              <i className="big facebook icon"></i>
-                            </Link>
-                            <Link to="/page-2/">
-                              <i className="big instagram icon"></i>
-                            </Link>
-                            <Link to="/page-2/">
-                              <i className="big twitter square icon"></i>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="diviiider"></div>
-                  <div className="article-tabcontainer">
-                    <div className="second-part">
-                      {data.strapiBlogs.content.map(doc => (
-                        <ol>
-                          <li>
-                            <h1>
-                              {doc.id}. {doc.heading}
-                            </h1>
-                            <p>{doc.content}</p>
-                            {doc.images.length === 1 ? (
-                              <>
-                                <div className="images4">
-                                  {doc.images.slice(0, 1).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.length === 2 ? (
-                              <>
-                                <div className="images5">
-                                  {doc.images.slice(0, 2).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.length === 3 ? (
-                              <>
-                                <div className="images3">
-                                  {doc.images.slice(0, 3).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.length === 4 ? (
-                              <>
-                                <div className="images3">
-                                  {doc.images.slice(0, 3).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                                <div className="images4">
-                                  {doc.images.slice(3, 4).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.length === 5 ? (
-                              <>
-                                <div className="images3">
-                                  {doc.images.slice(0, 3).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                                <div className="images5">
-                                  {doc.images.slice(3, 5).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.length === 6 ? (
-                              <>
-                                <div className="images3">
-                                  {doc.images.slice(0, 3).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                                <div className="images3">
-                                  {doc.images.slice(3, 6).map(mark => (
-                                    <img
-                                      src={mark.image.childImageSharp.fluid.src}
-                                      alt="multiple"
-                                    />
-                                  ))}
-                                </div>
-                              </>
-                            ) : null}
-                            {doc.images.map(newer =>
-                              newer.info === "" ? (
-                                <div style={{ display: "none" }}></div>
-                              ) : (
-                                <span>{newer.info}</span>
-                              )
-                            )}
-                          </li>
-                        </ol>
+            <div className="artdeskcard" key={data.strapiBlogs.id}>
+              <div className="arttabboxcard">
+                <div className="artdesk-cardtabimage">
+                  <img
+                    src={data.strapiBlogs.image.childImageSharp.fluid.src}
+                    alt="banner"
+                  />
+                </div>
+                <div className="cardinfo">
+                  <div className="card-start" style={{ paddingTop: "10px" }}>
+                    <div className="card-genre">
+                      {data.strapiBlogs.categories.map(doc => (
+                        <button className="card-btn">{doc.name}</button>
                       ))}
                     </div>
-                    <div className="aligndesk-bottom">
-                      <div className="articledesk-bottom">
-                        <h1> Share : </h1>
-                        <div className="article-icons">
-                          <Link to="/page-2/">
-                            <i className="big facebook icon"></i>
-                          </Link>
-                          <Link to="/page-2/">
-                            <i className="big instagram icon"></i>
-                          </Link>
-                          <Link to="/page-2/">
-                            <i className="big twitter square icon"></i>
-                          </Link>
-                        </div>
-                      </div>
+                    <div className="cardartdesk-detail">
+                      <h1>{data.strapiBlogs.title}</h1>
+                      <p>{data.strapiBlogs.description}</p>
                     </div>
                   </div>
-                </>
-              )}
-            />
+                  <div className="iconcard-details">
+                    <div className="ui avatar image">
+                      <h1>JK</h1>
+                    </div>
+                    <div className="cardart-footer">
+                      <div className="card-color">
+                        <h2>By</h2>
+                        <h1>
+                          {data.strapiBlogs.author.firstname}{" "}
+                          {data.strapiBlogs.author.lastname}
+                        </h1>
+                      </div>
+                      <p>on {data.strapiBlogs.published_at.slice(0, 10)}</p>
+                    </div>
+                  </div>
+                  <div className="articledesk-bottom">
+                    <h1> Share : </h1>
+                    <div className="article-icons">
+                      <Link to="/page-2/">
+                        <i className="big facebook icon"></i>
+                      </Link>
+                      <Link to="/page-2/">
+                        <i className="big instagram icon"></i>
+                      </Link>
+                      <Link to="/page-2/">
+                        <i className="big twitter square icon"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="diviiider"></div>
+            <div className="article-tabcontainer">
+              <div className="second-part">
+                {data.strapiBlogs.content.map(doc => (
+                  <ol>
+                    <li>
+                      <h1>
+                        {doc.id}. {doc.heading}
+                      </h1>
+                      <p>{doc.content}</p>
+                      {doc.images.length === 1 ? (
+                        <>
+                          <div className="images4">
+                            {doc.images.slice(0, 1).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.length === 2 ? (
+                        <>
+                          <div className="images5">
+                            {doc.images.slice(0, 2).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.length === 3 ? (
+                        <>
+                          <div className="images3">
+                            {doc.images.slice(0, 3).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.length === 4 ? (
+                        <>
+                          <div className="images3">
+                            {doc.images.slice(0, 3).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                          <div className="images4">
+                            {doc.images.slice(3, 4).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.length === 5 ? (
+                        <>
+                          <div className="images3">
+                            {doc.images.slice(0, 3).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                          <div className="images5">
+                            {doc.images.slice(3, 5).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.length === 6 ? (
+                        <>
+                          <div className="images3">
+                            {doc.images.slice(0, 3).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                          <div className="images3">
+                            {doc.images.slice(3, 6).map(mark => (
+                              <img
+                                src={mark.image.childImageSharp.fluid.src}
+                                alt="multiple"
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {doc.images.map(newer =>
+                        newer.info === "" ? (
+                          <div style={{ display: "none" }}></div>
+                        ) : (
+                          <span>{newer.info}</span>
+                        )
+                      )}
+                    </li>
+                  </ol>
+                ))}
+              </div>
+              <div className="aligndesk-bottom">
+                <div className="articledesk-bottom">
+                  <h1> Share : </h1>
+                  <div className="article-icons">
+                    <Link to="/page-2/">
+                      <i className="big facebook icon"></i>
+                    </Link>
+                    <Link to="/page-2/">
+                      <i className="big instagram icon"></i>
+                    </Link>
+                    <Link to="/page-2/">
+                      <i className="big twitter square icon"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="diviiider"></div>
             <div className="commenttabbox">
               <h1>Add a Comment</h1>
@@ -356,9 +345,9 @@ const FirstDesk = () => {
               <ViewComments />
             </div>
             <div className="diviiider"></div>
-            <Related Relatedbox={Relatedbox} classname='artreltabbox' />
-            <Related classname='artreltabbox' />
-            <Related classname='artreltabbox' />
+            <Related Relatedbox={Relatedbox} classname="artreltabbox" />
+            <Related classname="artreltabbox" />
+            <Related classname="artreltabbox" />
           </div>
         </div>
       </div>

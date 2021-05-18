@@ -8,6 +8,7 @@ import Footer from "./components/Footer"
 import FooterMob from "./components/FooterMob"
 import FooterTab from "./components/FooterTab"
 import SEO from "./seo"
+import FirstTrial from "./Article/FirstTrial"
 
 const Mob = () => {
   return (
@@ -53,7 +54,7 @@ const Desk = () => {
       <Header />
       <SEO title="Home" />
       <div style={{ paddingTop: "80px" }}></div>
-      <FirstDesk jk={6050} />
+      <FirstTrial jk={6050} />
       <Footer />
     </>
   )

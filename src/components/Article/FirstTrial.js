@@ -13,7 +13,7 @@ import mint3 from "../../images/Mint4.png"
 import sleep from "../../images/Sleep.png"
 import { StaticQuery, graphql, Link, useStaticQuery } from "gatsby"
 
-const FirstDesk = ({ jk, indNum, click, setClick }) => {
+const FirstTrial = ({ jk }) => {
   const locref = useRef(null)
 
   const isInView = () => {
@@ -38,7 +38,7 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
   const adPos = inView ? "adbox" : "noad"
 
   const data = useStaticQuery(graphql`
-    query newarticlequery {
+    query articlevariablequery {
       allStrapiBlogs {
         edges {
           node {
@@ -81,11 +81,6 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
     }
   `)
 
-  const newNum = indNum - 4
-  console.log("firstdesk indNUm", indNum)
-  console.log("firstdesk", newNum)
-  console.log("firstdesk", data.allStrapiBlogs.edges[newNum])
-
   return (
     <>
       <div className="article-desk">
@@ -93,33 +88,28 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
           <div className="article-left">
             <div
               className="artdeskcard"
-              key={data.allStrapiBlogs.edges[newNum].node.id}
+              key={data.allStrapiBlogs.edges[0].node.id}
             >
               <div className="artdeskboxcard">
                 <div className="artdesk-cardimage">
                   <img
                     src={
-                      data.allStrapiBlogs.edges[newNum].node.image
-                        .childImageSharp.fluid.src
+                      data.allStrapiBlogs.edges[0].node.image.childImageSharp
+                        .fluid.src
                     }
                     alt="banner"
-                    // onClick={()=>setClicked(false)}
                   />
                 </div>
                 <div className="cardinfo">
                   <div className="card-start" style={{ paddingTop: "10px" }}>
                     <div className="card-genre">
-                      {data.allStrapiBlogs.edges[newNum].node.categories.map(
-                        doc => (
-                          <button className="card-btn">{doc.name}</button>
-                        )
-                      )}
+                      {data.allStrapiBlogs.edges[0].node.categories.map(doc => (
+                        <button className="card-btn">{doc.name}</button>
+                      ))}
                     </div>
                     <div className="cardartdesk-detail">
-                      <h1>{data.allStrapiBlogs.edges[newNum].node.title}</h1>
-                      <p>
-                        {data.allStrapiBlogs.edges[newNum].node.description}
-                      </p>
+                      <h1>{data.allStrapiBlogs.edges[0].node.title}</h1>
+                      <p>{data.allStrapiBlogs.edges[0].node.description}</p>
                     </div>
                   </div>
                   <div className="iconcard-details">
@@ -127,29 +117,23 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
                       <h1>JK</h1>
                     </div>
                     <div className="cardart-footer">
-                      {data.allStrapiBlogs.edges[newNum].node.author ===
-                      null ? (
+                      {data.allStrapiBlogs.edges[0].node.author === null ? (
                         <div style={{ display: "none" }}>none</div>
                       ) : (
                         <div className="card-color">
                           <h2>By</h2>
                           <h1>
-                            {
-                              data.allStrapiBlogs.edges[newNum].node.author
-                                .firstname
-                            }{" "}
-                            {
-                              data.allStrapiBlogs.edges[newNum].node.author
-                                .lastname
-                            }
+                            {data.allStrapiBlogs.edges[0].node.author.firstname}{" "}
+                            {data.allStrapiBlogs.edges[0].node.author.lastname}
                           </h1>
                         </div>
                       )}
                       <p>
                         on{" "}
-                        {data.allStrapiBlogs.edges[
-                          newNum
-                        ].node.published_at.slice(0, 10)}
+                        {data.allStrapiBlogs.edges[0].node.published_at.slice(
+                          0,
+                          10
+                        )}
                       </p>
                     </div>
                   </div>
@@ -173,7 +157,7 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
             <div className="diviider"></div>
             <div className="article-container">
               <div className="second-part">
-                {data.allStrapiBlogs.edges[newNum].node.content.map(doc => (
+                {data.allStrapiBlogs.edges[0].node.content.map(doc => (
                   <ol>
                     <li>
                       <h1>
@@ -375,15 +359,6 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
             <Related classname="artrelboxcard" />
             <Related classname="artrelboxcard" />
             <Related classname="artrelboxcard" />
-            <div>
-              <button
-                onClick={() => {
-                  setClick(false)
-                }}
-              >
-                Click here for more Related Articles
-              </button>
-            </div>
           </div>
           <div className="article-right" ref={locref}>
             <div className={adPos}>
@@ -398,44 +373,4 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
   )
 }
 
-export default FirstDesk
-
-// export const query = graphql`
-//   query newarticlequery($id: String!) {
-//     strapiBlogs(id: { eq: $id }) {
-//       id
-//       title
-//       description
-//       content {
-//         content
-//         heading
-//         id
-//         images {
-//           image {
-//             childImageSharp {
-//               fluid {
-//                 src
-//               }
-//             }
-//           }
-//           info
-//         }
-//       }
-//       image {
-//         childImageSharp {
-//           fluid {
-//             src
-//           }
-//         }
-//       }
-//       categories {
-//         name
-//       }
-//       author {
-//         firstname
-//         lastname
-//       }
-//       published_at
-//     }
-//   }
-// `
+export default FirstTrial

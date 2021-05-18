@@ -160,3 +160,7 @@ nav{
 .nav ul{
   margin-bottom: 0 !important;
 }
+
+.nodisplay{
+  display: none;
+}
