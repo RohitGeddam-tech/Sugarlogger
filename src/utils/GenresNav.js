@@ -61,6 +61,7 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
   const dropup = View ? dropdown : dropRev
 
   return (
+    <div className="genres-bar">
     <nav className={isMobile ? "large-genresnav" : "genres-nav"}>
       <div className="overflow-links">
         <ul>
@@ -107,6 +108,7 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
         </ul>
       </div>
     </nav>
+    </div>
   )
 }
 

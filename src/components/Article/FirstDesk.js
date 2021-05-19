@@ -375,15 +375,6 @@ const FirstDesk = ({ jk, indNum, click, setClick }) => {
             <Related classname="artrelboxcard" />
             <Related classname="artrelboxcard" />
             <Related classname="artrelboxcard" />
-            <div>
-              <button
-                onClick={() => {
-                  setClick(false)
-                }}
-              >
-                Click here for more Related Articles
-              </button>
-            </div>
           </div>
           <div className="article-right" ref={locref}>
             <div className={adPos}>

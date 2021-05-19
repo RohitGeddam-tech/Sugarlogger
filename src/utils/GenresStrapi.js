@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from "react"
+import SecondTrial from "../components/components/SecondTrial"
 import { Dropdown } from "semantic-ui-react"
 import { graphql, Link, useStaticQuery } from "gatsby"
+import FirstPage from "../components/components/FirstPage"
 
 const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
   const [clicked, setClicked] = useState(false)
@@ -74,54 +76,108 @@ const GenresNav = ({ NavLinks, isMobile, space, bottom }) => {
     }
   `)
 
+  const [firstClick, setFirstClick] = useState(false)
+  const [secondClick, setSecondClick] = useState(false)
+
+  const [newArt, setNewArt] = useState(1)
+
+  const container = secondClick ? "nodisplay" : ""
+
+  const newcontainer = firstClick ? "nodisplay" : ""
+
   return (
-    <nav className={isMobile ? "large-genresnav" : "genres-nav"}>
-      <div className="overflow-links">
-        <ul>
-          {data.allStrapiCategories.edges.slice(0,8).map(document => (
-            <li>
-              <Link
-                to={`/${document.node.name}`}
-                activeClassName="linkactive"
-                className="genres-navlinks"
-              >
-                {document.node.name}
-              </Link>
-            </li>
-          ))}
-          <li
-            className="parent"
-            ref={locref}
-            onClick={() => {
-              setClicked(!clicked)
-            }}
-            onMouseEnter={() => {
-              setClicked(true)
-            }}
-            onMouseLeave={() => {
-              setClicked(false)
-            }}
-          >
-            <button>More Categories</button>
-            <div className={dropup} style={positionDrop}>
+    <>
+      <div className={container}>
+        <div className={newcontainer}>
+          <FirstPage />
+        </div>
+        <div className="genres-bar">
+          <nav className={isMobile ? "large-genresnav" : "genres-nav"}>
+            <div className="overflow-links">
               <ul>
-                {data.allStrapiCategories.edges.slice(8,16).map(doc => (
-                  <li>
-                    <Link to={`/${doc.node.name}`}>
-                      <Dropdown.Item
-                        className="genres-droplink"
-                        text={doc.node.name}
-                      />
-                    </Link>
+                {data.allStrapiCategories.edges.slice(0, 6).map(document => (
+                  <li onClick={() => setNewArt(document.node.strapiId)}>
+                    <div
+                      onClick={()=>setFirstClick(true)}
+                      className={
+                        document.node.strapiId === newArt
+                          ? "linkactive"
+                          : "genres-navlinks"
+                      }
+                    >
+                      {document.node.name}
+                    </div>
                   </li>
                 ))}
+                {data.allStrapiCategories.edges.length > 7 ? (
+                  <li
+                    className="parent"
+                    ref={locref}
+                    onClick={() => {
+                      setClicked(!clicked)
+                    }}
+                    onMouseEnter={() => {
+                      setClicked(true)
+                    }}
+                    onMouseLeave={() => {
+                      setClicked(false)
+                    }}
+                  >
+                    <button>More Categories</button>
+                    <div className={dropup} style={positionDrop}>
+                      <ul>
+                        {data.allStrapiCategories.edges
+                          .slice(7, 14)
+                          .map(doc => (
+                            <li onClick={() => setNewArt(doc.node.strapiId)}>
+                              <Link>
+                                <Dropdown.Item
+                                  className="genres-droplink"
+                                  text={doc.node.name}
+                                />
+                              </Link>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  </li>
+                ) : (
+                  <div className="nodisplay"></div>
+                )}
               </ul>
             </div>
-          </li>
-        </ul>
+            {/* <div className="nodisplay"><SecondTrial /></div> */}
+            {console.log(newArt)}
+          </nav>
+        </div>
       </div>
-    </nav>
+      <SecondTrial
+        indNum={newArt}
+        clicked={secondClick}
+        setClicked={setSecondClick}
+      />
+    </>
   )
 }
 
 export default GenresNav
+
+// export const query = graphql`
+//   query categoryquery {
+//     allStrapiCategories {
+//       edges {
+//         node {
+//           id
+//           name
+//           strapiId
+//           blogs {
+//             id
+//             title
+//             tag
+//             author
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

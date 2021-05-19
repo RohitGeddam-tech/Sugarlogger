@@ -148,7 +148,7 @@ const SecondPage = ({clicked, setClicked}) => {
                 )
               })}
           </div>
-          {console.log('data.lenggth',data.allStrapiBlogs.edges.length)}
+          {/* {console.log('data.lenggth',data.allStrapiBlogs.edges.length)} */}
           <Cardbtn
             page={page}
             setPage={setPage}

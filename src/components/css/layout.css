@@ -164,3 +164,7 @@ nav{
 .nodisplay{
   display: none;
 }
+
+a:hover{
+  color: none;
+}

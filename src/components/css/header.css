@@ -60,6 +60,9 @@ header {
   display: flex;
   align-items: center;
   white-space: nowrap !important;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .login {
