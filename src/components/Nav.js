@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
-import "./css/Nav.css"
+import React, { useState } from "react"
+import "../css/header.css"
 import { Link } from "gatsby"
 import { Sling as Hamburger } from "hamburger-react"
 import Svg from "../images/SugarloggerLogo.svg"
-import NavLinks from "./components/NavBarLinks"
 
 const TestMob = () => {
   const [isActive, setActive] = useState(false)
@@ -58,16 +57,6 @@ const TestMob = () => {
         )}
         {isActive ? (
           <div className="fade">
-            {/* {NavLinks.map(document => (
-              <Link
-                className="link-nav"
-                activeClassName="link-activenav"
-                to={document.links}
-              >
-                {document.name}
-              </Link>
-            ))} */}
-
             <Link className="link-nav">For Path Labs</Link>
             <Link className="link-nav">For Patients</Link>
             <Link className="link-nav">For Doctors</Link>
@@ -83,15 +72,7 @@ const TestMob = () => {
           </div>
         ) : (
           <div className="fade" style={{ display: "none" }}>
-            {NavLinks.map(document => (
-              <Link
-                className="link-name"
-                activeClassName="link-active"
-                to={document.links}
-              >
-                {document.name}
-              </Link>
-            ))}
+            none
           </div>
         )}
       </div>

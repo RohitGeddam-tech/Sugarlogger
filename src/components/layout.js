@@ -6,19 +6,46 @@
  */
 
 import * as React from "react"
+import {useState, useEffect} from 'react'
 import PropTypes from "prop-types"
-import "semantic-ui-css/semantic.min.css"
-import Header from "./Nav"
-import Footer from "./MainFooter"
-import "./css/layout.css"
+// import { useStaticQuery, graphql } from "gatsby"
+
+import Header from "./header"
+import Footer from './Footer'
+import Nav from './Nav'
+import Clientonly from './ClientOnly'
+import "./layout.css"
+import FooterMob from "./FooterMob"
 
 const Layout = ({ children }) => {
+  const [isTab, setTab] = useState(
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:1170px)").matches
+      : null
+  )
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setTab(window.matchMedia("(max-width:1170px)").matches)
+    })
+  }, [isTab])
+
+  const [isMob, setMob] = useState(
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width:650px)").matches
+      : null
+  )
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setMob(window.matchMedia("(max-width:650px)").matches)
+    })
+  }, [isMob])
+
   return (
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+    <Clientonly>
+      {isTab ? <Nav /> : <Header />}
+      <div className='top-pad'>{children}</div>
+      {isMob ? <FooterMob /> : <Footer />}
+    </Clientonly>
   )
 }
 

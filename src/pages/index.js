@@ -1,11 +1,14 @@
 import * as React from "react"
-import Home from "../Viewmode/home"
-import ClientOnly from "../utils/ClientOnly"
+
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import GenresNav from "../Home/GenreNavPage"
 
 const IndexPage = () => (
-  <ClientOnly>
-    <Home />
-  </ClientOnly>
+  <Layout>
+    <Seo title="Home" />
+    <GenresNav />
+  </Layout>
 )
 
 export default IndexPage

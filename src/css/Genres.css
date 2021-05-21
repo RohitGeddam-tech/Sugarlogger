@@ -1,0 +1,238 @@
+.genres-bar {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 0.5px solid #b7b7b7;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  margin-bottom: 0;
+  height: fit-content;
+}
+
+@media screen and (max-width: 780px) {
+    .genres-bar{
+        width: 95%;
+    }
+}
+
+.genres-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  margin: auto;
+  /* position: relative; */
+  padding: 5px 10px;
+}
+
+.large-genresnav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  /* overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;  */
+}
+
+.overflow-links button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  white-space: nowrap !important;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 12px 16px;
+  height: 47px;
+  line-height: 23px;
+  text-align: center;
+  cursor: pointer;
+  color: #282c36;
+}
+
+.overflow-links > ul {
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  margin-bottom: 0 !important;
+}
+
+.new-drop {
+  display: block;
+  position: absolute;
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: visible;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 11;
+}
+
+.reverse-drop {
+  display: block;
+  position: absolute;
+  top: auto;
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: visible;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 11;
+}
+
+.reverse-drop ul {
+  display: block;
+  width: fit-content !important;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+}
+
+.new-drop ul {
+  display: block;
+  width: fit-content !important;
+  cursor: pointer;
+  padding-right: 12px;
+  background-color: white;
+}
+
+.none-drop {
+  display: none;
+}
+
+.overflow-links {
+  display: inline-flex;
+  /* position: relative; */
+  width: 100%;
+}
+
+.overflow-links ul {
+  /* overflow-x: auto;
+    overflow-y: hidden; */
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.overflow-links::-webkit-scrollbar {
+  display: none !important;
+}
+
+.overflow-links ul::-webkit-scrollbar {
+  display: none !important;
+}
+
+.overflow-links li {
+  padding-bottom: 0 !important;
+}
+
+.genres-navlinks {
+  display: flex;
+  white-space: nowrap !important;
+  align-items: center;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 12px 16px;
+  height: 47px;
+  line-height: 23px;
+  text-align: center;
+  color: #282c36;
+  cursor: pointer;
+  margin-left: 0 !important;
+}
+
+.genres-navlinks:hover {
+  color: #d44638;
+}
+
+/* .genres-navlinks:first-child{
+      margin: 0 !important;
+  } */
+
+.relative-drop {
+  width: fit-content !important;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.absolute-drop {
+  width: fit-content !important;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+}
+
+.ui.dropdown {
+  display: flex;
+  align-items: center;
+  white-space: nowrap !important;
+  /* position: absolute; */
+}
+
+.ui.dropdown > .text {
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #282c36;
+}
+
+.menu.transition.visible {
+  padding: 10px;
+}
+
+.genres-droplink {
+  cursor: pointer;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #282c36;
+  padding: 10px;
+  white-space: nowrap;
+  background-color: white;
+  cursor: pointer;
+}
+
+.genres-droplink:hover {
+  color: #d44638;
+}
+
+.linkactive {
+  display: flex;
+  white-space: nowrap !important;
+  align-items: center;
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 12px 16px;
+  height: 47px;
+  line-height: 23px;
+  text-align: center;
+  margin-left: 0 !important;
+  background: rgba(212, 70, 56, 0.1);
+  color: #d44638;
+  cursor: pointer;
+}

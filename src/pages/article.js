@@ -1,13 +1,14 @@
-import React from "react"
-import MainArticle from "../components/MainArticle"
-import ClientOnly from "../utils/ClientOnly"
+import * as React from "react"
 
-const article = () => {
-  return (
-    <ClientOnly>
-      <MainArticle />
-    </ClientOnly>
-  )
-}
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import Article from "../Article/Article"
 
-export default article
+const IndexPage = () => (
+  <Layout>
+    <Seo title="Home" />
+    <Article />
+  </Layout>
+)
+
+export default IndexPage
