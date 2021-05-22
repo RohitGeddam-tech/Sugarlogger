@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import "../css/SecondPage.css"
 import { Search } from "semantic-ui-react"
-import Cardbox from "../Utils/CardBox"
+// import Cardbox from "../Utils/CardBox"
 import Cardbtn from "../utils/Cardbtn"
 
 const remUnderline = e => {
