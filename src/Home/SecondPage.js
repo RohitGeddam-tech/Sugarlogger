@@ -65,7 +65,7 @@ const SecondPage = () => {
                 return (
                   <div className="inherit-boxcard">
                     <Link
-                      to={`/article/${doc.node.id}`}
+                      to={`/article/${doc.node.strapiId}`}
                       className="boxcard"
                       key={doc.node.id}
                     >
@@ -101,7 +101,7 @@ const SecondPage = () => {
                             <p>{doc.node.published_at.slice(0, 10)}</p>
                           </div>
                           <div className="card-right">
-                            <Link to={`/article/${doc.node.id}`}>
+                            <Link to={`/article/${doc.node.strapiId}`}>
                               <h1
                                 onMouseEnter={addUnderline}
                                 onMouseLeave={remUnderline}
@@ -109,7 +109,7 @@ const SecondPage = () => {
                                 READ MORE
                               </h1>
                             </Link>
-                            <Link to={`/article/${doc.node.id}`}>
+                            <Link to={`/article/${doc.node.strapiId}`}>
                               <i className="large arrow right icon"></i>
                             </Link>
                           </div>

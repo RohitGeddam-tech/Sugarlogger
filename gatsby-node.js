@@ -82,7 +82,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const CategoryPages = result.data.allStrapiCategories.edges
   CategoryPages.forEach(CategoryPage => {
-    console.log(CategoryPage)
     createPage({
       path: `/Genre/${CategoryPage.node.id}`,
       component: CategoryTemplate,
@@ -95,9 +94,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const BlogPages = result.data.allStrapiBlogs.edges
   BlogPages.forEach(BlogPage => {
-    console.log(BlogPage)
     createPage({
-      path: `/article/${BlogPage.node.id}`,
+      path: `/article/${BlogPage.node.strapiId}`,
       component: BlogTemplate,
       context: {
         data: result.data,
