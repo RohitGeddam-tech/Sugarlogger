@@ -2,43 +2,6 @@ import React, { useState, useRef, useEffect, useCallback } from "react"
 import { Dropdown } from "semantic-ui-react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import "../css/Genres.css"
-import SecondPage from "../Home/SecondPage"
-import SecondTrial from './SecondTrial'
-
-const NavLinks = [
-  {
-    name: "Latest",
-    links: "/",
-  },
-  {
-    name: "Trending",
-    links: "/page-2/",
-  },
-  {
-    name: "Yoga",
-    links: "/yoga/",
-  },
-  {
-    name: "Diet Food",
-    links: "/diet/",
-  },
-  {
-    name: "Home Remedies",
-    links: "/homeRemedies/",
-  },
-  {
-    name: "Fitness",
-    links: "/fitness/",
-  },
-  {
-    name: "Diabetes",
-    links: "/diabetes/",
-  },
-  {
-    name: "Ayurvedic",
-    links: "/ayurvedic/",
-  },
-]
 
 const GenresNav = () => {
   const [clicked, setClicked] = useState(false)
@@ -97,60 +60,6 @@ const GenresNav = () => {
   const dropRev = clicked ? "reverse-drop" : "none-drop"
 
   const dropup = View ? dropdown : dropRev
-
-  // return (
-  //   <>
-  //     <div className="genres-bar" style={{marginTop:'20px'}}>
-  //       <nav className="genres-nav">
-  //         <div className="overflow-links">
-  //           <ul>
-  //             {NavLinks.map(document => (
-  //               <li>
-  //                 <Link
-  //                   to={document.links}
-  //                   activeClassName="linkactive"
-  //                   className="genres-navlinks"
-  //                 >
-  //                   {document.name}
-  //                 </Link>
-  //               </li>
-  //             ))}
-  //             <li
-  //               className="parent"
-  //               ref={locref}
-  //               onClick={() => {
-  //                 setClicked(!clicked)
-  //               }}
-  //               onMouseEnter={() => {
-  //                 setClicked(true)
-  //               }}
-  //               onMouseLeave={() => {
-  //                 setClicked(false)
-  //               }}
-  //             >
-  //               <button>More Categories</button>
-  //               <div className={dropup} style={positionDrop}>
-  //                 <ul>
-  //                   {NavLinks.map(doc => (
-  //                     <li>
-  //                       <Link to={doc.links}>
-  //                         <Dropdown.Item
-  //                           className="genres-droplink"
-  //                           text={doc.name}
-  //                         />
-  //                       </Link>
-  //                     </li>
-  //                   ))}
-  //                 </ul>
-  //               </div>
-  //             </li>
-  //           </ul>
-  //         </div>
-  //       </nav>
-  //     </div>
-  //     <SecondPage />
-  //   </>
-  // )
 
   const data = useStaticQuery(graphql`
     query categoryquery {

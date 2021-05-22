@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const Cardbtn = ({ postsPerPage, totalPosts, paginate, page, setPage }) => {
   const pageNumbers = []
@@ -8,12 +8,12 @@ const Cardbtn = ({ postsPerPage, totalPosts, paginate, page, setPage }) => {
   }
   // console.log(page)
 
-  const [perNumber, setPerNumber] = useState(1)
-  const perRender = 4
+  // const [perNumber, setPerNumber] = useState(1)
+  // const perRender = 4
 
-  const indexOfLastPost = perNumber * perRender
-  const indexOfFirstPost = indexOfLastPost - perRender
-  const currentPosts = pageNumbers.slice(indexOfFirstPost, indexOfLastPost)
+  // const indexOfLastPost = perNumber * perRender
+  // const indexOfFirstPost = indexOfLastPost - perRender
+  // const currentPosts = pageNumbers.slice(indexOfFirstPost, indexOfLastPost)
 
   const PrevPage = () => {
     if (page - 1 === 0) {

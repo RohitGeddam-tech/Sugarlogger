@@ -5,41 +5,6 @@ import "../css/Genres.css"
 import FirstPage from "./FirstPage"
 import SecondPage from "./SecondPage"
 
-const NavLinks = [
-  {
-    name: "Latest",
-    links: "/",
-  },
-  {
-    name: "Trending",
-    links: "/page-2/",
-  },
-  {
-    name: "Yoga",
-    links: "/yoga/",
-  },
-  {
-    name: "Diet Food",
-    links: "/diet/",
-  },
-  {
-    name: "Home Remedies",
-    links: "/homeRemedies/",
-  },
-  {
-    name: "Fitness",
-    links: "/fitness/",
-  },
-  {
-    name: "Diabetes",
-    links: "/diabetes/",
-  },
-  {
-    name: "Ayurvedic",
-    links: "/ayurvedic/",
-  },
-]
-
 const GenresNav = () => {
   const [clicked, setClicked] = useState(false)
 
@@ -97,61 +62,6 @@ const GenresNav = () => {
   const dropRev = clicked ? "reverse-drop" : "none-drop"
 
   const dropup = View ? dropdown : dropRev
-
-  // return (
-  //   <>
-  //     <FirstPage />
-  //     <div className="genres-bar">
-  //       <nav className="genres-nav">
-  //         <div className="overflow-links">
-  //           <ul>
-  //             {NavLinks.map(document => (
-  //               <li>
-  //                 <Link
-  //                   to={document.links}
-  //                   activeClassName="linkactive"
-  //                   className="genres-navlinks"
-  //                 >
-  //                   {document.name}
-  //                 </Link>
-  //               </li>
-  //             ))}
-  //             <li
-  //               className="parent"
-  //               ref={locref}
-  //               onClick={() => {
-  //                 setClicked(!clicked)
-  //               }}
-  //               onMouseEnter={() => {
-  //                 setClicked(true)
-  //               }}
-  //               onMouseLeave={() => {
-  //                 setClicked(false)
-  //               }}
-  //             >
-  //               <button>More Categories</button>
-  //               <div className={dropup} style={positionDrop}>
-  //                 <ul>
-  //                   {NavLinks.map(doc => (
-  //                     <li>
-  //                       <Link to={doc.links}>
-  //                         <Dropdown.Item
-  //                           className="genres-droplink"
-  //                           text={doc.name}
-  //                         />
-  //                       </Link>
-  //                     </li>
-  //                   ))}
-  //                 </ul>
-  //               </div>
-  //             </li>
-  //           </ul>
-  //         </div>
-  //       </nav>
-  //     </div>
-  //     <SecondPage />
-  //   </>
-  // )
 
   const data = useStaticQuery(graphql`
     query Homecategoryquery {
