@@ -3,7 +3,7 @@ import { Dropdown } from "semantic-ui-react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import "../css/Genres.css"
 import SecondPage from "../Home/SecondPage"
-// import SecondTrial from './SecondTrial'
+import SecondTrial from './SecondTrial'
 
 const NavLinks = [
   {
@@ -184,7 +184,7 @@ const GenresNav = () => {
               {data.allStrapiCategories.edges.slice(0, 6).map(document => (
                 <li>
                   <Link
-                    to={`/Genres/${document.node.id}`}
+                    to={`/Genre/${document.node.id}`}
                     activeClassName="linkactive"
                     className="genres-navlinks"
                   >
@@ -229,7 +229,7 @@ const GenresNav = () => {
           </div>
         </nav>
       </div>
-      <SecondPage />
+      {/* <SecondPage /> */}
       {/* <SecondTrial /> */}
     </>
   )

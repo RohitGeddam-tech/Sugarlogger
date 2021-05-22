@@ -343,11 +343,11 @@
   }
 
   .second-container{
-    width: 94%;
+    width: 85%;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
 
   .second-container{
     width: 94%;
@@ -356,6 +356,18 @@
 
   .inherit-boxcard{
     width: 100% !important;
-    margin: 0;
+    margin: 15px 0;
   }
+
+  .boxcard{
+    padding: 0;
+  }
+
+  .boxcard:hover{
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
 }

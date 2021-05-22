@@ -186,7 +186,7 @@ const GenresNav = () => {
               {data.allStrapiCategories.edges.slice(0, 6).map(document => (
                 <li>
                   <Link
-                    to={`/Genres/${document.node.id}`}
+                    to={`/Genre/${document.node.id}`}
                     activeClassName="linkactive"
                     className="genres-navlinks"
                   >

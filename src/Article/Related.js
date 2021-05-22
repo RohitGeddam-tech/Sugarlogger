@@ -95,14 +95,11 @@ const Related = () => {
 
   return (
     <>
-      <div className="related-heading">
-        <h1>Related Articles</h1>
-      </div>
       {data.allStrapiBlogs.edges.slice(0, 3).map(doc => (
         <div className="artdeskcard" key={doc.node.id}>
           <Link to={`/article/${doc.node.id}`} className="artrelboxcard">
             <div className="artdesk-cardimage">
-              <img src={doc.node.image} alt="banner" />
+              <img src={doc.node.image.childImageSharp.fluid.src} alt="banner" />
             </div>
             <div className="cardinfo">
               <div className="card-start" style={{ paddingTop: "10px" }}>
@@ -113,21 +110,21 @@ const Related = () => {
                 </div>
                 <div className="cardartdesk-detail">
                   <h1>{doc.node.title}</h1>
-                  <p>{doc.node.description}</p>
+                  <p>{doc.node.description.slice(0,150)}</p>
                 </div>
               </div>
               <div className="iconcard-details">
-                <div className="ui avatar image">
+                {/* <div className="ui avatar image">
                   <h1>KP</h1>
-                </div>
+                </div> */}
                 <div className="cardrel-footer">
                   <div className="right">
                     <div className="colorOrange">
                       <h2>By </h2>
-                      <h1>
+                      {/* <h1>
                         {doc.node.author.firstname}{" "}
                         {doc.node.author.lastname}
-                      </h1>
+                      </h1> */}
                     </div>
                     <p>{doc.node.published_at.slice(0, 10)}</p>
                   </div>

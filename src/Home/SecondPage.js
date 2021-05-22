@@ -161,17 +161,17 @@ const SecondPage = () => {
                           </div>
                           <div className="card-detail">
                             <h1>{doc.node.title}</h1>
-                            <p>{doc.node.description}</p>
+                            <p>{doc.node.description.slice(0,150)}</p>
                           </div>
                         </div>
                         <div className="card-footer">
                           <div className="card-left">
                             <h1>
                               By
-                              <h2>
+                              {/* <h2>
                                 {doc.node.author.firstname}{" "}
                                 {doc.node.author.lastname}
-                              </h2>
+                              </h2> */}
                             </h1>
                             <p>{doc.node.published_at.slice(0, 10)}</p>
                           </div>
