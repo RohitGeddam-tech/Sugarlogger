@@ -49,9 +49,9 @@ const FirstDesk = ({ pageContext }) => {
                     <div className="cardart-footer">
                       <div className="card-color">
                         <h2>By</h2>
-                        {/* <h1>
-                          {author.firstname} {author.lastname}
-                        </h1> */}
+                        <h1>
+                          {author.username}
+                        </h1>
                       </div>
                       <p>on {published_at.slice(0, 10)}</p>
                     </div>

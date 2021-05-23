@@ -67,9 +67,9 @@ const SecondPage = ({pageContext}) => {
                         <div className="card-left">
                           <h1>
                             By
-                            {/* <h2>
-                              {doc.author.firstname} {doc.author.lastname}
-                            </h2> */}
+                            <h2>
+                              {doc.author.username}
+                            </h2>
                           </h1>
                           <p>{doc.published_at.slice(0, 10)}</p>
                         </div>

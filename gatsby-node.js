@@ -28,8 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               name
             }
             author {
-              firstname
-              lastname
+              username
             }
             content {
               id

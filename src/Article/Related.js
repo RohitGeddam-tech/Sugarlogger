@@ -82,8 +82,7 @@ const Related = () => {
               name
             }
             author {
-              firstname
-              lastname
+              username
             }
             published_at
             strapiId
@@ -121,10 +120,9 @@ const Related = () => {
                   <div className="right">
                     <div className="colorOrange">
                       <h2>By </h2>
-                      {/* <h1>
-                        {doc.node.author.firstname}{" "}
-                        {doc.node.author.lastname}
-                      </h1> */}
+                      <h1>
+                        {doc.node.author.username}
+                      </h1>
                     </div>
                     <p>{doc.node.published_at.slice(0, 10)}</p>
                   </div>

@@ -40,8 +40,7 @@ const SecondPage = () => {
               name
             }
             author {
-              firstname
-              lastname
+              username
             }
             published_at
             strapiId
@@ -93,10 +92,9 @@ const SecondPage = () => {
                           <div className="card-left">
                             <h1>
                               By
-                              {/* <h2>
-                                {doc.node.author.firstname}{" "}
-                                {doc.node.author.lastname}
-                              </h2> */}
+                              <h2>
+                                {doc.node.author.username}
+                              </h2>
                             </h1>
                             <p>{doc.node.published_at.slice(0, 10)}</p>
                           </div>

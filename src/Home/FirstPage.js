@@ -33,8 +33,7 @@ const FirstPage = () => {
         }
         published_at
         author {
-          firstname
-          lastname
+          username
         }
         strapiId
       }
@@ -82,8 +81,7 @@ const FirstPage = () => {
                   <div className="colorOrange">
                     <h2>By </h2>
                     <h1>
-                      {data.strapiBlogs.author.firstname}{" "}
-                      {data.strapiBlogs.author.lastname}
+                      {data.strapiBlogs.author.username}
                     </h1>
                   </div>
                   <p>{data.strapiBlogs.published_at.slice(0, 10)}</p>
