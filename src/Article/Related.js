@@ -1,12 +1,12 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-const remUnderline = e => {
-  e.target.style.textDecoration = "none"
-}
-const addUnderline = e => {
-  e.target.style.textDecoration = "underline"
-}
+// const remUnderline = e => {
+//   e.target.style.textDecoration = "none"
+// }
+// const addUnderline = e => {
+//   e.target.style.textDecoration = "underline"
+// }
 
 // const Related = ({ Relatedbox }) => {
 //   return (
@@ -63,6 +63,10 @@ const addUnderline = e => {
 // export default Related
 
 const Related = () => {
+
+  const [clicked, setClicked] = useState(false)
+  const line = clicked ? 'line' : ''
+
   const data = useStaticQuery(graphql`
     query relatedcatquery {
       allStrapiBlogs {
@@ -92,13 +96,22 @@ const Related = () => {
     }
   `)
 
+
   return (
     <>
       {data.allStrapiBlogs.edges.slice(0, 3).map(doc => (
-        <div className="artdeskcard" key={doc.node.id}>
-          <Link to={`/article/${doc.node.id}`} className="artrelboxcard">
+        <div
+          className="artdeskcard"
+          key={doc.node.id}
+          onMouseEnter={()=>setClicked(true)}
+          onMouseLeave={()=>setClicked(false)}
+        >
+          <Link to={`/article/${doc.node.strapiId}`} className="artrelboxcard">
             <div className="artdesk-cardimage">
-              <img src={doc.node.image.childImageSharp.fluid.src} alt="banner" />
+              <img
+                src={doc.node.image.childImageSharp.fluid.src}
+                alt="banner"
+              />
             </div>
             <div className="cardinfo">
               <div className="card-start" style={{ paddingTop: "10px" }}>
@@ -109,7 +122,7 @@ const Related = () => {
                 </div>
                 <div className="cardartdesk-detail">
                   <h1>{doc.node.title}</h1>
-                  <p>{doc.node.description.slice(0,150)}</p>
+                  <p>{doc.node.description.slice(0, 150)}</p>
                 </div>
               </div>
               <div className="iconcard-details">
@@ -120,22 +133,15 @@ const Related = () => {
                   <div className="right">
                     <div className="colorOrange">
                       <h2>By </h2>
-                      <h1>
-                        {doc.node.author.username}
-                      </h1>
+                      <h1>{doc.node.author.username}</h1>
                     </div>
                     <p>{doc.node.published_at.slice(0, 10)}</p>
                   </div>
                   <div className="left">
-                    <Link to={`/article/${doc.node.id}`}>
-                      <h1
-                        onMouseEnter={addUnderline}
-                        onMouseLeave={remUnderline}
-                      >
-                        READ MORE
-                      </h1>
+                    <Link to={`/article/${doc.node.strapiId}`}>
+                      <h1 className={line}>READ MORE</h1>
                     </Link>
-                    <Link to={`/article/${doc.node.id}`}>
+                    <Link to={`/article/${doc.node.strapiId}`}>
                       <i className="large arrow right icon"></i>
                     </Link>
                   </div>

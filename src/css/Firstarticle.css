@@ -279,11 +279,13 @@
 }
 
 .adbox {
-  /* width: 30%; */
-  width: 100%;
+  width: 30%;
+  /* width: 100%; */
   padding: 5px;
-  /* position: fixed; */
+  position: fixed;
 }
+
+
 
 .noad {
   width: 100%;
@@ -862,6 +864,15 @@ textarea:-moz-placeholder {
   margin-top: 15px;
 }
 
+.line{
+  text-decoration: underline;
+}
+
+.modal-mobContainer{
+  width: 95%;
+  padding-top: 10px;
+}
+
 /*Desktop ends*/
 
 @media screen and (max-width: 780px) {
@@ -900,14 +911,16 @@ textarea:-moz-placeholder {
 
   .artdesk-cardimage img{
     width: 100% !important;
-    object-fit: fill;
-    height: fit-content !important;
+    height: 300px;
+    object-fit: cover;
+    /* height: fit-content !important; */
   }
 
   .images4 img{
     width: 100% !important;
-    object-fit: fill;
-    height: fit-content !important;
+    height: 300px;
+    object-fit: cover;
+    /* height: fit-content !important; */
   }
 
   .article-left{

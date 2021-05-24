@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState, useRef, useCallback, useEffect} from "react"
 import { Link } from "gatsby"
 import "../css/Firstarticle.css"
 import Related from "./Related"
@@ -18,6 +18,30 @@ const FirstDesk = ({ pageContext }) => {
     published_at,
     content,
   } = pageContext.pageData.node
+
+  const locref = useRef(null)
+
+  const isInView = () => {
+    const rect = window.pageYOffset
+    return rect <= 4900
+  }
+
+  const [inView, setInView] = useState(false)
+
+  const scrollHandler = useCallback(() => {
+    setInView(isInView())
+  }, [])
+
+  useEffect(() => {
+    setInView(isInView())
+    window.addEventListener("scroll", scrollHandler)
+    return () => {
+      window.removeEventListener("scroll", scrollHandler)
+    }
+  }, [scrollHandler])
+
+  const adPos = inView ? "adbox" : "relad"
+
   return (
     <Layout>
       <div className="noad">
@@ -283,8 +307,8 @@ const FirstDesk = ({ pageContext }) => {
             </div>
             <Related />
           </div>
-          <div className="article-right">
-            <div className="adbox">
+          <div className="article-right" ref={locref}>
+            <div className={adPos}>
               <div className="ad">
                 <h1>AD</h1>
               </div>
