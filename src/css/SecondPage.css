@@ -194,6 +194,7 @@
   flex-flow: column;
   align-items: flex-start;
   margin-top: 10px;
+  height: 150px !important;
 }
 
 .card-detail h1 {
@@ -337,6 +338,12 @@
   transform: rotate(0.01deg);
 }
 
+@media screen and (max-width: 1280px) {
+  .card-detail{
+    height: 200px !important;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .inherit-boxcard{
     width: 46% !important;
@@ -345,6 +352,11 @@
   .second-container{
     width: 85%;
   }
+
+  .card-detail{
+    height: 150px !important;
+  }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -368,6 +380,10 @@
     box-shadow: none !important;
     background-color: transparent !important;
     border: none !important;
+  }
+
+  .card-detail{
+    height: fit-content !important;
   }
 
 }

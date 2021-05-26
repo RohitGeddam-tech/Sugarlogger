@@ -85,7 +85,7 @@ const SecondPage = () => {
                           </div>
                           <div className="card-detail">
                             <h1>{doc.node.title}</h1>
-                            <p>{doc.node.description.slice(0,150)}</p>
+                            <p>{doc.node.description.substring(0,150)}{doc.node.description.length > 150 && ' ...'}</p>
                           </div>
                         </div>
                         <div className="card-footer">

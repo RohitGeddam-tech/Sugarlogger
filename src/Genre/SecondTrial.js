@@ -60,7 +60,7 @@ const SecondPage = ({pageContext}) => {
                         </div> */}
                         <div className="card-detail">
                           <h1>{doc.title}</h1>
-                          <p>{doc.description.slice(0,150)}</p>
+                          <p>{doc.description.substring(0,150)}{doc.description.length > 150 && '...'}</p>
                         </div>
                       </div>
                       <div className="card-footer">
